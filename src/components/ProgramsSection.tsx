@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 import ttImg from "@/assets/tt-illustration.png";
 import squashImg from "@/assets/squash-illustration.png";
-
-const ACTIVEPASS_TT_LINK = "#";
-const ACTIVEPASS_SQUASH_LINK = "#";
 
 const programs = [
   {
@@ -19,7 +17,7 @@ const programs = [
       "Leagues",
     ],
     cta: "Enroll in TT Training",
-    link: ACTIVEPASS_TT_LINK,
+    link: "/tt-training",
     accent: false,
   },
   {
@@ -32,7 +30,7 @@ const programs = [
       "Flexible Time Slots",
     ],
     cta: "Book Squash Court",
-    link: ACTIVEPASS_SQUASH_LINK,
+    link: "/squash-booking",
     accent: true,
   },
 ];
@@ -75,9 +73,9 @@ const ProgramsSection = () => {
                   ))}
                 </ul>
                 <Button asChild size="lg" className="w-full rounded-xl shadow-soft">
-                  <a href={program.link} target="_blank" rel="noopener noreferrer">
+                  <Link to={program.link}>
                     👉 {program.cta}
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>
