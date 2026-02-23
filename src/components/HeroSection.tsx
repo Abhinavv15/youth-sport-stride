@@ -1,0 +1,40 @@
+import { Button } from "@/components/ui/button";
+import heroImg from "@/assets/hero-illustration.png";
+
+const HeroSection = () => {
+  return (
+    <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden" style={{ background: "var(--hero-gradient)" }}>
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6 animate-fade-in-up">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-800 leading-tight text-foreground">
+              Building Confident{" "}
+              <span className="text-primary">Young Athletes</span>
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
+              Professional Table Tennis & Squash training designed for kids.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="rounded-2xl text-base px-8 shadow-soft">
+                <a href="#programs">🏓 Explore TT Training</a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="rounded-2xl text-base px-8 border-primary/30 text-primary hover:bg-primary/5">
+                <a href="#programs">🏸 Book Squash Facility</a>
+              </Button>
+            </div>
+          </div>
+          <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            <img
+              src={heroImg}
+              alt="Kids playing table tennis and squash with coaches and supportive parents"
+              className="w-full h-auto rounded-2xl"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
