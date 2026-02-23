@@ -8,7 +8,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-3">
             <h3 className="text-xl font-heading font-800 text-primary-foreground">
-              🏓 SportKids Academy
+              🏓 World Sports Academy
             </h3>
             <p className="text-sm leading-relaxed">
               Building confident young athletes through professional Table Tennis & Squash training.
@@ -50,7 +50,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-10 pt-6 text-center text-xs text-primary-foreground/50">
           <p>All registrations and bookings are processed via ActivePass.</p>
-          <p className="mt-1">© {new Date().getFullYear()} SportKids Academy. All rights reserved.</p>
+          <p className="mt-1">© {new Date().getFullYear()} World Sports Academy. All rights reserved.</p>
         </div>
       </div>
     </footer>
