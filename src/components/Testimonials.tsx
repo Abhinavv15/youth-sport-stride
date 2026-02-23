@@ -21,11 +21,11 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-20 bg-background">
+    <section id="testimonials" className="py-20 bg-section-alt">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl text-foreground mb-3">
-            What <span className="text-primary">Parents</span> Say
+          <h2 className="text-3xl md:text-4xl text-blue-600 mb-3">
+            What <span className="text-blue-600">Parents</span> Say
           </h2>
         </div>
 
@@ -33,17 +33,17 @@ const Testimonials = () => {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="bg-card border border-border rounded-2xl p-6 shadow-soft space-y-4"
+              className="bg-white border border-sport-pink/20 rounded-2xl p-6 shadow-soft space-y-4 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} className="fill-accent text-accent" />
+                  <Star key={i} size={16} className="fill-sport-yellow text-sport-yellow" />
                 ))}
               </div>
-              <p className="text-muted-foreground leading-relaxed italic">"{t.text}"</p>
+              <p className="text-gray-700 leading-relaxed italic hover:text-sport-pink/80 transition-colors">"{t.text}"</p>
               <div>
-                <p className="font-bold text-foreground">{t.name}</p>
-                <p className="text-sm text-muted-foreground">{t.role}</p>
+                <p className="font-bold text-sport-pink">{t.name}</p>
+                <p className="text-sm text-muted-foreground hover:text-sport-purple transition-colors">{t.role}</p>
               </div>
             </div>
           ))}

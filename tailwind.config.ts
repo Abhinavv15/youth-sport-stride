@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -14,8 +15,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Nunito", "system-ui", "sans-serif"],
-        body: ["DM Sans", "system-ui", "sans-serif"],
+        heading: ["Poppins", "system-ui", "sans-serif"],
+        body: ["Poppins", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -52,6 +53,19 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         "section-alt": "hsl(var(--section-alt))",
+        // Sport-specific colors
+        "sport-blue": "hsl(var(--sport-blue))",
+        "sport-green": "hsl(var(--sport-green))",
+        "sport-orange": "hsl(var(--sport-orange))",
+        "sport-purple": "hsl(var(--sport-purple))",
+        "sport-yellow": "hsl(var(--sport-yellow))",
+        "sport-red": "hsl(var(--sport-red))",
+        "sport-teal": "hsl(var(--sport-teal))",
+        "sport-pink": "hsl(var(--sport-pink))",
+        // Gradients
+        "sport-gradient": "var(--sport-gradient)",
+        "energy-gradient": "var(--energy-gradient)",
+        "victory-gradient": "var(--victory-gradient)",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -95,5 +109,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config;

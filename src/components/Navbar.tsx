@@ -3,10 +3,11 @@ import { Menu, X, LogIn, LogOut, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
+import logo from "@/assets/logo.webp";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<{ email?: string } | null>(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,17 +26,20 @@ const Navbar = () => {
   };
 
   const navLinks = [
+    { label: "Home", href: "/#hero" },
+    { label: "Training", href: "/#programs" },
+    { label: "Drop-in", href: "/squash-booking" },
+    { label: "Gallery", href: "/#gallery" },
     { label: "About", href: "/#about" },
-    { label: "Programs", href: "/#programs" },
-    { label: "Why Us", href: "/#why-us" },
-    { label: "Testimonials", href: "/#testimonials" },
+    { label: "Camps", href: "/#camps" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border shadow-soft">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className="font-heading text-xl font-800 text-foreground">
-          🏓 World Sports <span className="text-primary">Academy</span>
+        <Link to="/" className="flex items-center gap-3 font-heading text-xl font-800 text-foreground">
+          <img src={logo} alt="World Sports Academy Logo" className="h-10 w-auto" />
+          <span>World Sports Academy</span>
         </Link>
 
         {/* Desktop */}
@@ -44,7 +48,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium text-blue-600 hover:text-purple-600 transition-colors hover:scale-105 transform duration-200"
             >
               {link.label}
             </a>
@@ -59,7 +63,7 @@ const Navbar = () => {
               </Button>
             </div>
           ) : (
-            <Button asChild size="sm">
+            <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white hover:shadow-lg transition-all duration-300 hover:scale-105">
               <Link to="/login"><LogIn size={14} className="mr-1" /> Login</Link>
             </Button>
           )}
@@ -82,7 +86,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="block text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="block text-sm font-medium text-blue-600 hover:text-purple-600 transition-colors hover:bg-blue-600/10 p-2 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               {link.label}
@@ -93,7 +97,7 @@ const Navbar = () => {
               <LogOut size={14} className="mr-1" /> Logout
             </Button>
           ) : (
-            <Button asChild size="sm" className="w-full">
+            <Button asChild size="sm" className="w-full bg-blue-600 hover:bg-blue-700 text-white hover:shadow-lg">
               <Link to="/login" onClick={() => setIsOpen(false)}><LogIn size={14} className="mr-1" /> Login</Link>
             </Button>
           )}
