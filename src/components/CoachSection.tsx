@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import coachImg from "@/assets/abhinay vaddi.png";
+import coachImg from "@/assets/abhinay vaddi.jpg";
 
 const CoachSection = () => {
   return (
