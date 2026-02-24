@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
-import ttImg from "@/assets/tt-illustration.png";
-import squashImg from "@/assets/squash-illustration.png";
+import ttImg from "@/assets/world sports academy 3.webp";
+import squashImg from "@/assets/world sports academy image 2.jpg";
 
 const programs = [
   {

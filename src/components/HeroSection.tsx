@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroImg from "@/assets/hero-illustration.png";
+import heroImg from "@/assets/world sports academy 4.jpg";
 
 const HeroSection = () => {
   return (

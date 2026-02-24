@@ -1,4 +1,4 @@
-import aboutImg from "@/assets/about-illustration.png";
+import aboutImg from "@/assets/world sports academy image 1.webp";
 
 const AboutSection = () => {
   return (
@@ -18,7 +18,7 @@ const AboutSection = () => {
               About Our <span className="text-blue-600">Academy</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              At SportKids Academy, we believe every child deserves the chance to develop
+              At World Sports Academy, we believe every child deserves the chance to develop
               discipline, fitness, confidence, and a lifelong love for sport — all while having fun.
             </p>
             <p className="text-muted-foreground leading-relaxed">

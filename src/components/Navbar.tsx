@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { label: "Home", href: "/#hero" },
+    { label: "Home", href: "/" },
     { label: "Training", href: "/#programs" },
     { label: "Drop-in", href: "/squash-booking" },
     { label: "Gallery", href: "/#gallery" },

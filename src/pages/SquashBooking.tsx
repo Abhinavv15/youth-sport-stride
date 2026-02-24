@@ -3,7 +3,7 @@ import { Check, ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import squashImg from "@/assets/squash-illustration.png";
+import squashImg from "@/assets/world sports academy image 2.jpg";
 
 const ACTIVEPASS_SQUASH_LINK = "https://activepass.in/squash";
 

@@ -1,5 +1,5 @@
 import { Star } from "lucide-react";
-import testimonialImg from "@/assets/testimonial-illustration.png";
+import testimonialImg from "@/assets/world sports academy 5.jpg";
 
 const testimonials = [
   {
@@ -53,7 +53,7 @@ const Testimonials = () => {
           <img
             src={testimonialImg}
             alt="Happy parent and child after sports training"
-            className="w-48 h-auto rounded-2xl"
+            className="w-80 h-auto rounded-2xl"
             loading="lazy"
           />
         </div>
