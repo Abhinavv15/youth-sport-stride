@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import coachImg from "@/assets/abhinay vaddi.png";
 
 const CoachSection = () => {
   return (
@@ -13,7 +14,7 @@ const CoachSection = () => {
               <div className="lg:w-2/5 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center p-8">
                 <div className="relative">
                   <img 
-                    src="/src/assets/abhinay vaddi.png" 
+                    src={coachImg} 
                     alt="Head Coach Abhinay Vaddi" 
                     className="rounded-2xl shadow-2xl max-w-full h-auto border-4 border-white/20 object-cover"
                   />
