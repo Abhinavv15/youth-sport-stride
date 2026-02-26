@@ -119,7 +119,17 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading font-bold tracking-tight;
+  }
+
+  /* Apply a sepia filter to all standard images */
+  img:not([alt*="Logo"]):not([alt*="Head Coach"]) {
+    filter: sepia(40%);
   }
 }
