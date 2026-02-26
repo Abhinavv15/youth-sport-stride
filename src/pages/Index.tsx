@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import CoachSection from "@/components/CoachSection";
 import CampsSection from "@/components/CampsSection";
 import ProgramsSection from "@/components/ProgramsSection";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import HowItWorks from "@/components/HowItWorks";
-import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -24,10 +19,10 @@ const Index = () => {
 
     // Check on initial load
     handleHashChange();
-    
+
     // Listen for hash changes
     window.addEventListener('hashchange', handleHashChange);
-    
+
     return () => {
       window.removeEventListener('hashchange', handleHashChange);
     };
@@ -42,12 +37,7 @@ const Index = () => {
         ) : (
           <>
             <HeroSection />
-            <AboutSection />
-            <CoachSection />
             <ProgramsSection />
-            <WhyChooseUs />
-            <HowItWorks />
-            <Testimonials />
           </>
         )}
       </main>

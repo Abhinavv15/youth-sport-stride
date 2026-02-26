@@ -1,43 +1,34 @@
 import { useState, useEffect } from "react";
-import { Menu, X, LogIn, LogOut, User } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useNavigate } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
+import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.webp";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [user, setUser] = useState<{ email?: string } | null>(null);
-  const navigate = useNavigate();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null);
-    });
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-    });
-    return () => subscription.unsubscribe();
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-    navigate("/");
-  };
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Training", href: "/#programs" },
-    { label: "Drop-in", href: "/squash-booking" },
-    { label: "Gallery", href: "/#gallery" },
-    { label: "About", href: "/#about" },
+    { label: "Training", href: "/tt-training" },
+    { label: "Drop-in", href: "/tt-training" },
+    { label: "Gallery", href: "/tt-training#gallery" },
+    { label: "About", href: "/tt-training#about" },
     { label: "Camps", href: "/#camps" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border shadow-soft">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? (location.pathname === "/tt-training" ? "bg-black" : "bg-background/95 backdrop-blur-md border-b border-border shadow-sm") : "bg-transparent"}`}>
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className="flex items-center gap-3 font-heading text-xl font-800 text-foreground">
+        <Link to="/" className={`flex items-center gap-3 font-heading text-xl font-800 ${isHome ? "text-foreground" : "text-white"}`}>
           <img src={logo} alt="World Sports Academy Logo" className="h-10 w-auto" />
           <span>World Sports Academy</span>
         </Link>
@@ -48,30 +39,16 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-blue-600 hover:text-purple-600 transition-colors hover:scale-105 transform duration-200"
+              className={`text-sm font-medium hover:text-sport-green transition-colors hover:scale-105 transform duration-200 ${isHome ? "text-foreground" : "text-white"}`}
             >
               {link.label}
             </a>
           ))}
-          {user ? (
-            <div className="flex items-center gap-3">
-              <span className="text-sm text-muted-foreground flex items-center gap-1">
-                <User size={14} /> {user.email?.split("@")[0]}
-              </span>
-              <Button size="sm" variant="outline" onClick={handleLogout}>
-                <LogOut size={14} className="mr-1" /> Logout
-              </Button>
-            </div>
-          ) : (
-            <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <Link to="/login"><LogIn size={14} className="mr-1" /> Login</Link>
-            </Button>
-          )}
+
         </div>
 
-        {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground"
+          className={`md:hidden hover:text-sport-green transition-colors ${isHome ? "text-foreground" : "text-white"}`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -81,26 +58,17 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-background border-b border-border px-4 pb-4 space-y-3">
+        <div className="md:hidden bg-sport-blue/95 backdrop-blur-md border-b border-border px-4 pb-4 space-y-3">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block text-sm font-medium text-blue-600 hover:text-purple-600 transition-colors hover:bg-blue-600/10 p-2 rounded-lg"
+              className="block text-sm font-medium text-white hover:text-sport-green transition-colors hover:bg-white/10 p-2 rounded-lg"
               onClick={() => setIsOpen(false)}
             >
               {link.label}
             </a>
           ))}
-          {user ? (
-            <Button size="sm" variant="outline" className="w-full" onClick={() => { handleLogout(); setIsOpen(false); }}>
-              <LogOut size={14} className="mr-1" /> Logout
-            </Button>
-          ) : (
-            <Button asChild size="sm" className="w-full bg-blue-600 hover:bg-blue-700 text-white hover:shadow-lg">
-              <Link to="/login" onClick={() => setIsOpen(false)}><LogIn size={14} className="mr-1" /> Login</Link>
-            </Button>
-          )}
         </div>
       )}
     </nav>
