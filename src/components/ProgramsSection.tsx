@@ -26,8 +26,10 @@ const programs = [
     image: squashImg,
     imageAlt: "Kid playing squash in modern indoor court",
     features: [
-      "Squash Court Facility Booking",
-      "Flexible Time Slots",
+      "Squash Court Booking",
+      "Trainings",
+      "Tournaments",
+      "Leagues",
     ],
     cta: "Book Squash Court",
     link: "/squash-booking",
@@ -37,19 +39,14 @@ const programs = [
 
 const ProgramsSection = () => {
   return (
-    <section id="programs" className="pb-8 md:pb-12 pt-0 relative overflow-hidden" style={{ background: "var(--hero-gradient)" }}>
+    <section id="programs" className="pb-8 md:pb-12 pt-0 relative overflow-hidden bg-slate-50 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-          <h2 className="text-3xl md:text-3xl lg:text-4xl text-foreground mb-4 font-bold">
-            Our <span className="text-sport-green">Programs</span>
-          </h2>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {programs.map((program) => (
-            <div
+            <Link
               key={program.title}
-              className={`bg-card rounded-2xl shadow-card overflow-hidden border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${program.accent ? "ring-2 ring-sport-green/20" : ""}`}
+              to={program.link}
+              className={`block bg-card rounded-2xl shadow-card overflow-hidden border border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-2 ${program.accent ? "ring-2 ring-sport-green/20" : ""}`}
             >
               <img
                 src={program.image}
@@ -69,13 +66,8 @@ const ProgramsSection = () => {
                     </li>
                   ))}
                 </ul>
-                <Button asChild size="lg" className="w-full rounded-xl shadow-soft bg-sport-green text-white hover:bg-sport-green/90 hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-bold">
-                  <Link to={program.link}>
-                    {program.cta}
-                  </Link>
-                </Button>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

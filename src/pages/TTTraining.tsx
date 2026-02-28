@@ -3,15 +3,18 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Award, Trophy, ArrowRight, Users, Target, Clock, User, UsersRound, CheckCircle2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ttHeroImg from "@/assets/tt imagee.png";
+import ttHeroImg from "@/assets/imaege4.png";
 import coachImg from "@/assets/abhinay vaddi.jpg";
 
-import offer1 from "@/assets/world sports academy 5.jpg";
-import offer2 from "@/assets/world sports academy image 2.jpg";
-import offer3 from "@/assets/world sports academy 3.webp";
-import offer4 from "@/assets/TT IMAGE.jpg";
-import offer5 from "@/assets/world sports academy 4.jpg";
+import offer1 from "@/assets/generic_adult_playing.png";
+import offer2 from "@/assets/TT IMAGE.jpg";
+import offer3 from "@/assets/kids_having_fun_tt.png";
+import offer4 from "@/assets/image-30.webp";
+import offer5 from "@/assets/image-19.webp";
 import missionImg from "@/assets/world sports academy image 1.webp";
+
+import paraImg1 from "@/assets/image-24.webp";
+import paraImg2 from "@/assets/image-29.webp";
 
 import gal1 from "@/assets/image-2.webp";
 import gal2 from "@/assets/image-4.webp";
@@ -38,27 +41,23 @@ const galleryImages = [
 const faqs = [
   {
     question: "Do I need to bring my own equipment?",
-    answer: "For your first few sessions, we provide all necessary equipment including rackets, bats, and balls. As you progress, our coaches can recommend the best gear for your style of play if you wish to purchase your own."
-  },
-  {
-    question: "Is there parking available at the academy?",
-    answer: "Yes, we have ample free parking available for all members and guests directly in front of the facility."
-  },
-  {
-    question: "What should I wear to my first session?",
-    answer: "Wear comfortable athletic clothing and non-marking indoor court shoes."
+    answer: "You need to bring your own equipment. IT is also available for rent or purchase at the venue."
   },
   {
     question: "Do you offer trial sessions?",
-    answer: "Absolutely! We offer a Drop-in Session for new visitors to experience our facilities and meet our coaches before committing to a membership."
+    answer: "No trial sessions, but we offer a free assessment which needs to be booked separately."
   },
   {
     question: "What is your cancellation policy?",
-    answer: "We require 24 hours notice for cancellation of private sessions. Group classes can be cancelled up to 4 hours in advance without penalty."
+    answer: "24 hrs notice for cancellation of all training sessions, drop ins and court bookings"
   },
   {
     question: "Are there programs for children?",
-    answer: "Yes, we have specialized junior development programs for ages 6-18, ranging from introductory fun classes to elite competitive training."
+    answer: "Ages 5 and above; elite high performance training"
+  },
+  {
+    question: "Is the facility wheelchair accessible?",
+    answer: "Both locations are wheelchair accessible"
   }
 ];
 
@@ -82,7 +81,7 @@ const programs = [
     link: "#kids-training",
   },
   {
-    title: "ADVANCED CLASSES",
+    title: "HIGH PERFORMANCE TRAINING",
     subtitle: "ADULT & KIDS HIGH-PERFORMANCE DRILLS",
     image: offer4,
     link: "#advanced-classes",
@@ -112,7 +111,7 @@ const TTTraining = () => {
               Table Tennis Training
             </h1>
             <p className="text-lg md:text-xl text-white/90 text-center max-w-2xl mb-10 drop-shadow-md font-medium">
-              Empower your child with specialized youth training programs. From absolute beginners to junior champions, our expert coaches focus on fundamental skills, agility, and competitive strategy.
+              Join Canada's premier sports academy. Whether you're a beginner learning the basics or a pro refining your game, we have the expert coaching and world-class facilities for you.
             </p>
             <Button size="lg" className="bg-sport-green text-white hover:bg-sport-green/90 text-lg px-8 py-6 md:py-8 rounded-full font-bold shadow-2xl transform transition-transform hover:scale-105">
               Take a free Assessment
@@ -133,8 +132,8 @@ const TTTraining = () => {
                   <h3 className="text-sport-green font-bold tracking-widest uppercase text-sm flex items-center gap-2">
                     <span className="w-8 h-[2px] bg-sport-green"></span> Head Coach
                   </h3>
-                  <h2 className="text-4xl md:text-5xl font-heading font-800 text-foreground">
-                    Meet Abhinay Vaddi
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-800 text-foreground leading-tight">
+                    Meet <br /> Abhinay Vaddi
                   </h2>
                   <p className="text-xl text-primary font-semibold mt-2 text-sport-green">
                     Expert guidance for every step of your journey
@@ -409,10 +408,10 @@ const TTTraining = () => {
             </div>
           </section>
 
-          {/* Advanced Classes Section */}
+          {/* High Performance Training Section */}
           <section id="advanced-classes" className="pt-8 pb-12 mb-8">
             <div className="text-center mb-10 space-y-3">
-              <h2 className="text-3xl md:text-4xl font-heading font-800 tracking-tight text-foreground">Advanced Classes</h2>
+              <h2 className="text-3xl md:text-4xl font-heading font-800 tracking-tight text-foreground">High Performance Training</h2>
             </div>
             <div className="bg-card rounded-[2rem] shadow-xl border border-border overflow-hidden max-w-5xl mx-auto">
               <div className="grid md:grid-cols-2">
@@ -468,7 +467,7 @@ const TTTraining = () => {
                   Unlock the full <br className="hidden md:block" /> table tennis experience
                 </h2>
                 <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl">
-                  Get unlimited access to our state-of-the-art facilities, participate in exclusive leagues, enjoy priority tournament registration, and track your progress in real-time. Join our passionate community today.
+                  Get unlimited access to our state-of-the-art facilities, participate in exclusive leagues, enjoy priority tournament registration, and track your progress. Join our passionate community today.
                 </p>
               </div>
               <div className="flex-shrink-0 w-full md:w-auto mt-6 md:mt-0">
@@ -481,37 +480,30 @@ const TTTraining = () => {
               </div>
             </div>
           </section>
-          {/* Cancellation Policy Section */}
-          <section className="py-12 mb-8 bg-card rounded-[2rem] max-w-5xl mx-auto px-4 lg:px-10 border border-border shadow-sm">
-            <div className="w-full mx-auto">
-              <h2 className="text-3xl md:text-4xl font-heading font-900 text-center tracking-tight text-foreground uppercase mb-10">
-                Cancellation Policy
-              </h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Card 1 */}
-                <div className="flex flex-col border-2 border-[#111111] bg-card rounded-2xl overflow-hidden shadow-sm h-full">
-                  <div className="bg-sport-green py-3 px-4 text-center">
-                    <h3 className="text-white font-heading font-bold text-sm md:text-base uppercase tracking-wider">
-                      Students With Fixed Schedules
-                    </h3>
+
+          {/* Para Athletes Section */}
+          <section className="py-12 md:py-16 mb-8 mt-4 px-4 max-w-6xl mx-auto">
+            <div className="bg-gradient-to-br from-card to-muted/50 rounded-[2.5rem] shadow-xl border border-border overflow-hidden">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-0 items-center">
+                <div className="p-8 md:p-12 lg:p-16 space-y-6 md:pr-4">
+                  <div className="inline-block px-3 py-1 bg-sport-blue/10 text-sport-blue text-xs font-bold uppercase tracking-widest rounded-full mb-2">
+                    Inclusivity & Excellence
                   </div>
-                  <div className="p-6 flex-grow">
-                    <p className="text-foreground/80 text-sm leading-relaxed">
-                      Cancellations must be made at least 24 hours in advance. Any missed classes must be made up within the same month.
-                    </p>
-                  </div>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-900 tracking-tight text-foreground uppercase pt-1 leading-tight">
+                    Para Athlete <br className="hidden lg:block" /> Training
+                  </h2>
+                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                    We are deeply committed to empowering athletes of all abilities. Our specialized high-performance coaching programs emphasize the importance of inclusive para-training.
+                  </p>
+                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                    We are proud to train and support members of the <span className="font-bold text-foreground">Canadian National Para team</span>, providing them with world-class facilities and expert guidance to conquer the international stage.
+                  </p>
                 </div>
-                {/* Card 2 */}
-                <div className="flex flex-col border-2 border-[#111111] bg-card rounded-2xl overflow-hidden shadow-sm h-full">
-                  <div className="bg-sport-green py-3 px-4 text-center flex items-center justify-center">
-                    <h3 className="text-white font-heading font-bold text-sm md:text-base uppercase tracking-wider">
-                      Students With Irregular Or One-Time Scheduled Classes
-                    </h3>
-                  </div>
-                  <div className="p-6 flex-grow">
-                    <p className="text-foreground/80 text-sm leading-relaxed">
-                      Failure to provide at least 24 hours' notice will require full payment for the missed session.
-                    </p>
+                <div className="relative h-full min-h-[350px] md:min-h-[450px] p-6 lg:p-10 flex items-center justify-center">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-sport-blue/5 rounded-full blur-3xl -z-10"></div>
+                  <div className="grid grid-cols-2 h-full w-full gap-4 relative z-10">
+                    <img src={paraImg1} alt="Para Athlete Training Focus" className="w-full h-[200px] md:h-[280px] object-cover rounded-2xl shadow-lg transform -rotate-3 transition-transform hover:rotate-0 hover:scale-105 duration-300" />
+                    <img src={paraImg2} alt="Canadian National Para Team Training" className="w-full h-[200px] md:h-[280px] object-cover rounded-2xl shadow-lg mt-12 md:mt-16 transform rotate-3 transition-transform hover:rotate-0 hover:scale-105 duration-300 relative z-20" />
                   </div>
                 </div>
               </div>

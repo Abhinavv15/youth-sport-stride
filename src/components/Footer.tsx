@@ -1,69 +1,65 @@
-import { MapPin, Phone, Mail, Facebook, Instagram, Youtube } from "lucide-react";
-import logo from "@/assets/logo.webp";
+import { MapPin, Phone, Mail, Facebook, Instagram } from "lucide-react";
+
+const TiktokIcon = ({ size = 22, className = "" }: { size?: number; className?: string }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+  </svg>
+);
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-slate-900 via-[#14281c] to-sport-green py-8">
+    <footer id="contact" className="bg-gradient-to-r from-slate-900 via-[#14281c] to-sport-green py-8">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8 text-white/90 justify-between">
+        <div className="grid md:grid-cols-3 gap-8 text-white/90 justify-between">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <img src={logo} alt="World Sports Academy Logo" className="h-8 w-auto" />
-              <h3 className="text-xl font-heading font-800 text-white">
-                World Sports Academy
-              </h3>
-            </div>
-            <p className="text-sm leading-relaxed mt-4">
-              High-performance programs, facilities, and coaching for ambitious athletes.
-            </p>
-            <a
-              href="/squash-booking"
-              className="inline-block bg-sport-green hover:bg-sport-green/90 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors hover:scale-105 transform duration-200 mt-4"
-            >
-              Book Drop-in Session
-            </a>
-          </div>
-
-          {/* Navigation */}
-          <div className="space-y-4">
-            <h4 className="font-bold text-white">Navigation</h4>
-            <ul className="space-y-4 text-sm mt-4">
-              <li><a href="/" className="hover:text-sport-yellow transition-colors">Home</a></li>
-              <li><a href="#" className="hover:text-sport-yellow transition-colors">Book a Session</a></li>
-              <li><a href="#" className="hover:text-sport-yellow transition-colors">Memberships</a></li>
-              <li><a href="#" className="hover:text-sport-yellow transition-colors">Contact</a></li>
-            </ul>
+            <h3 className="text-3xl font-heading font-800 text-white tracking-tight">
+              World Sports Academy
+            </h3>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
             <h4 className="font-bold text-white">Contact Us</h4>
-            <div className="space-y-4 text-sm mt-4">
-              <p className="hover:text-sport-yellow transition-colors block">
-                +1 (365) 324-9060
-              </p>
-              <p className="hover:text-sport-yellow transition-colors block mt-4">
-                1233 Dillon Rd, Burlington, ON L7M 1K6
-              </p>
-              <p className="hover:text-sport-yellow transition-colors block mt-4 pt-4 border-t border-white/10">
-                134 Kennedy Rd S, Brampton ON L6W 0E5
-              </p>
+            <div className="space-y-4 text-sm mt-4 flex flex-col">
+              <a href="mailto:info@wsateam.com" className="flex items-center gap-2 hover:text-sport-yellow transition-colors">
+                <Mail size={16} /> info@wsateam.com
+              </a>
+              <a href="tel:+13653249060" className="flex items-center gap-2 hover:text-sport-yellow transition-colors">
+                <Phone size={16} /> +1 (365) 324-9060
+              </a>
+              <a href="https://maps.google.com/?q=1233+Dillon+Rd,+Burlington,+ON+L7M+1K6" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:text-sport-yellow transition-colors pt-2 border-t border-white/10">
+                <MapPin size={16} className="shrink-0 mt-1" /> 1233 Dillon Rd, Burlington, ON L7M 1K6
+              </a>
+              <a href="https://maps.google.com/?q=134+Kennedy+Rd+S,+Brampton+ON+L6W+0E5" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:text-sport-yellow transition-colors pt-2 border-t border-white/10">
+                <MapPin size={16} className="shrink-0 mt-1" /> 134 Kennedy Rd S, Brampton ON L6W 0E5
+              </a>
             </div>
           </div>
 
           {/* Social */}
           <div className="space-y-4">
             <h4 className="font-bold text-white mb-4">Follow Us</h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 items-center">
               <a href="#" aria-label="Facebook" className="hover:text-sport-yellow transition-colors hover:scale-110 transform duration-200">
                 <Facebook size={22} className="text-sport-yellow" />
               </a>
-              <a href="#" aria-label="Instagram" className="hover:text-sport-yellow transition-colors hover:scale-110 transform duration-200">
+              <a href="https://www.instagram.com/theworldsportsacademy?igsh=MTVjOGI3N3U2cWJuYg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-sport-yellow transition-colors hover:scale-110 transform duration-200">
                 <Instagram size={22} className="text-sport-yellow" />
               </a>
-              <a href="#" aria-label="YouTube" className="hover:text-sport-yellow transition-colors hover:scale-110 transform duration-200">
-                <Youtube size={22} className="text-sport-yellow" />
+              <a href="#" aria-label="TikTok" className="hover:text-sport-yellow transition-colors hover:scale-110 transform duration-200 flex items-center">
+                <TiktokIcon size={22} className="text-sport-yellow" />
               </a>
             </div>
           </div>
