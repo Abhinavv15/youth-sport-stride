@@ -41,7 +41,7 @@ const galleryImages = [
 const faqs = [
   {
     question: "Do I need to bring my own equipment?",
-    answer: "You need to bring your own equipment. IT is also available for rent or purchase at the venue."
+    answer: "You need to bring your own equipment. It is also available for rent or purchase at the venue."
   },
   {
     question: "Do you offer trial sessions?",
@@ -58,15 +58,23 @@ const faqs = [
   {
     question: "Is the facility wheelchair accessible?",
     answer: "Both locations are wheelchair accessible"
+  },
+  {
+    question: "What should I wear to my first session?",
+    answer: "Wear comfortable athletic clothing and non-marking indoor court shoes."
+  },
+  {
+    question: "Is there parking available at the academy?",
+    answer: "Yes, we have ample free parking available for all members and guests directly in front of the facility."
   }
 ];
 
 const programs = [
   {
-    title: "OPEN PLAY",
-    subtitle: "CASUAL PLAY AND DAILY ACCESS FOR ALL LEVELS",
-    image: offer1,
-    link: "https://activepass.app/",
+    title: "KIDS TRAINING",
+    subtitle: "BUILD INTEREST AND LEARN FUN FUNDAMENTALS",
+    image: offer3,
+    link: "#kids-training",
   },
   {
     title: "MEMBERSHIP",
@@ -75,10 +83,10 @@ const programs = [
     link: "#membership",
   },
   {
-    title: "KIDS TRAINING",
-    subtitle: "BUILD INTEREST AND LEARN FUN FUNDAMENTALS",
-    image: offer3,
-    link: "#kids-training",
+    title: "OPEN PLAY",
+    subtitle: "CASUAL PLAY AND DAILY ACCESS FOR ALL LEVELS",
+    image: offer1,
+    link: "https://activepass.app/",
   },
   {
     title: "HIGH PERFORMANCE TRAINING",
@@ -196,7 +204,7 @@ const TTTraining = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
-              {/* Box 1 - Open Play (Large) */}
+              {/* Box 1 - Kids Training (Large) */}
               <div className="md:col-span-8 relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
                 <a href={programs[0].link} target={programs[0].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />
@@ -209,7 +217,7 @@ const TTTraining = () => {
                 </a>
               </div>
 
-              {/* Box 2 - Beginner Kids (Small Vertical) */}
+              {/* Box 2 - Open Play (Small Vertical) */}
               <div className="md:col-span-4 relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
                 <a href={programs[2].link} target={programs[2].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />

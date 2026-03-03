@@ -41,23 +41,31 @@ const galleryImages = [
 const faqs = [
   {
     question: "Do I need to bring my own equipment?",
-    answer: "You need to bring your own equipment. IT is also available for rent or purchase at the venue."
+    answer: "You need to bring your own equipment. It is also available for rent or purchase at the venue."
   },
   {
     question: "Do you offer trial sessions?",
-    answer: "No trial sessions, but we offer a free assessment which needs to be booked separately."
+    answer: "No, we do not offer trial sessions. But we have a free assessment which needs to be booked separately"
   },
   {
     question: "What is your cancellation policy?",
-    answer: "24 hrs notice for cancellation of all training sessions, drop ins and court bookings"
+    answer: "We require a 24 hr notice for cancellation of all training sessions, drop-ins and court bookings."
   },
   {
     question: "Are there programs for children?",
-    answer: "Ages 5 and above; elite high performance training"
+    answer: "Yes, we have specialized junior development programs for ages 5 and above, ranging from introductory fun classes to elite high performance training."
   },
   {
     question: "Is the facility wheelchair accessible?",
     answer: "Both locations are wheelchair accessible"
+  },
+  {
+    question: "What should I wear to my first session?",
+    answer: "Wear comfortable athletic clothing and non-marking indoor court shoes."
+  },
+  {
+    question: "Is there parking available at the academy?",
+    answer: "Yes, we have ample free parking available for all members and guests directly in front of the facility."
   }
 ];
 
