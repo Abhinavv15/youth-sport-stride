@@ -40,19 +40,19 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? ((location.pathname === "/tt-training" || location.pathname === "/squash-booking") ? "bg-black" : "bg-background/95 backdrop-blur-md border-b border-border shadow-sm") : "bg-transparent"}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? ((location.pathname === "/tt-training" || location.pathname === "/squash-booking") ? "bg-[#111] border-b border-border shadow-md" : "bg-sport-green shadow-md") : (isHome ? "bg-sport-green shadow-md" : "bg-transparent")}`}>
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className={`flex items-center gap-3 font-heading text-xl font-800 ${isHome ? "text-foreground" : "text-white"}`}>
-          <img src={logo} alt="World Sports Academy Logo" className="h-10 w-auto" />
+        <a href="/" onClick={(e) => { e.preventDefault(); window.location.href = "/"; }} className="flex items-center gap-3 font-heading text-xl font-800 text-white cursor-pointer hover:opacity-90 transition-opacity">
+          <img src={logo} alt="World Sports Academy Logo" className="h-10 w-auto brightness-0 invert" />
           <span>World Sports Academy</span>
-        </Link>
+        </a>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             link.subLinks ? (
               <div key={link.label} className="relative group py-2">
-                <button className={`flex items-center gap-1 text-sm font-medium hover:text-sport-green transition-colors ${isHome ? "text-foreground" : "text-white"}`}>
+                <button className="flex items-center gap-1 text-sm font-medium hover:text-sport-yellow transition-colors text-white">
                   {link.label}
                   <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
                 </button>
@@ -72,7 +72,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className={`text-sm font-medium hover:text-sport-green transition-colors hover:scale-105 transform duration-200 ${isHome ? "text-foreground" : "text-white"}`}
+                className="text-sm font-medium hover:text-sport-yellow transition-colors hover:scale-105 transform duration-200 text-white"
               >
                 {link.label}
               </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className={`md:hidden hover:text-sport-green transition-colors ${isHome ? "text-foreground" : "text-white"}`}
+          className="md:hidden hover:text-sport-yellow transition-colors text-white"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -91,19 +91,19 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-sport-blue/95 backdrop-blur-md border-b border-border px-4 pb-4 space-y-3">
+        <div className="md:hidden bg-sport-green/95 backdrop-blur-md border-b border-border px-4 pb-4 space-y-3">
           {navLinks.map((link) => (
             <div key={link.label}>
               {link.subLinks ? (
                 <div className="space-y-1">
-                  <span className="block text-sm font-bold text-white/60 uppercase tracking-widest pt-2 px-2">
+                  <span className="block text-sm font-bold text-white/80 uppercase tracking-widest pt-2 px-2">
                     {link.label}
                   </span>
                   {link.subLinks.map((subLink) => (
                     <Link
                       key={subLink.label}
                       to={subLink.href}
-                      className="block text-sm font-medium text-white hover:text-sport-green transition-colors hover:bg-white/10 p-2 rounded-lg pl-4"
+                      className="block text-sm font-medium text-white hover:text-sport-yellow transition-colors hover:bg-white/10 p-2 rounded-lg pl-4"
                       onClick={() => setIsOpen(false)}
                     >
                       {subLink.label}
@@ -113,7 +113,7 @@ const Navbar = () => {
               ) : (
                 <a
                   href={link.href}
-                  className="block text-sm font-medium text-white hover:text-sport-green transition-colors hover:bg-white/10 p-2 rounded-lg pt-3"
+                  className="block text-sm font-medium text-white hover:text-sport-yellow transition-colors hover:bg-white/10 p-2 rounded-lg pt-3"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}

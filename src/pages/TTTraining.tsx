@@ -16,26 +16,50 @@ import missionImg from "@/assets/world sports academy image 1.webp";
 import paraImg1 from "@/assets/image-24.webp";
 import paraImg2 from "@/assets/image-29.webp";
 
-import gal1 from "@/assets/image-2.webp";
-import gal2 from "@/assets/image-4.webp";
-import gal3 from "@/assets/image-5.webp";
-import gal4 from "@/assets/image-6.webp";
-import gal5 from "@/assets/image-10.webp";
-import gal6 from "@/assets/image-11.webp";
-import gal7 from "@/assets/image-12.webp";
-import gal8 from "@/assets/image-13.webp";
-import gal9 from "@/assets/image-17.webp";
-import gal10 from "@/assets/image-19.webp";
-import gal11 from "@/assets/image-20.webp";
-import gal12 from "@/assets/image-24.webp";
-import gal13 from "@/assets/image-32.webp";
-import gal14 from "@/assets/image-33.webp";
-import gal15 from "@/assets/image-41.webp";
-import gal16 from "@/assets/image-44.webp";
-import gal17 from "@/assets/image-48.webp";
+import g1 from "@/assets/1.webp";
+import g2 from "@/assets/abhinay vaddi.jpg";
+import g3 from "@/assets/generic_adult_playing.png";
+import g4 from "@/assets/imaege4.png";
+import g5 from "@/assets/image-1.webp";
+import g6 from "@/assets/image-2.webp";
+import g7 from "@/assets/image-4.webp";
+import g8 from "@/assets/image-5.webp";
+import g9 from "@/assets/image-6.webp";
+import g10 from "@/assets/image-7.webp";
+import g11 from "@/assets/image-9.webp";
+import g12 from "@/assets/image-10.webp";
+import g13 from "@/assets/image-11.webp";
+import g14 from "@/assets/image-12.webp";
+import g15 from "@/assets/image-13.webp";
+import g16 from "@/assets/image-16.webp";
+import g17 from "@/assets/image-17.webp";
+import g18 from "@/assets/image-18.webp";
+import g19 from "@/assets/image-19.webp";
+import g20 from "@/assets/image-20.webp";
+import g21 from "@/assets/image-21.webp";
+import g22 from "@/assets/image-23.webp";
+import g23 from "@/assets/image-24.webp";
+import g24 from "@/assets/image-25.webp";
+import g25 from "@/assets/image-27.webp";
+import g26 from "@/assets/image-28.webp";
+import g27 from "@/assets/image-29.webp";
+import g28 from "@/assets/image-30.webp";
+import g29 from "@/assets/image-31.webp";
+import g30 from "@/assets/image-32.webp";
+import g31 from "@/assets/image-33.webp";
+import g32 from "@/assets/image-34.webp";
+import g33 from "@/assets/image-35.webp";
+import g34 from "@/assets/image-36.webp";
+import g35 from "@/assets/image-41.webp";
+import g36 from "@/assets/image-43.webp";
+import g37 from "@/assets/image-44.webp";
+import g38 from "@/assets/image-45.webp";
+import g39 from "@/assets/image-46.webp";
+import g40 from "@/assets/image-47.webp";
+import g41 from "@/assets/image-48.webp";
 
 const galleryImages = [
-  gal1, gal2, gal3, gal4, gal5, gal6, gal7, gal8, gal9, gal10, gal11, gal12, gal13, gal14, gal15, gal16, gal17
+  g1, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, g27, g28, g29, g30, g31, g32, g33, g34, g35, g36, g37, g38, g39, g40, g41
 ];
 
 const faqs = [
@@ -57,7 +81,7 @@ const faqs = [
   },
   {
     question: "Is the facility wheelchair accessible?",
-    answer: "Both locations are wheelchair accessible"
+    answer: "Both locations at Brampton and Burlington are wheelchair accessible."
   },
   {
     question: "What should I wear to my first session?",
@@ -65,14 +89,14 @@ const faqs = [
   },
   {
     question: "Is there parking available at the academy?",
-    answer: "Yes, we have ample free parking available for all members and guests directly in front of the facility."
+    answer: "Yes, we have ample free parking available for all members and guests directly in front of both the facilities."
   }
 ];
 
 const programs = [
   {
     title: "KIDS TRAINING",
-    subtitle: "BUILD INTEREST AND LEARN FUN FUNDAMENTALS",
+    subtitle: 'BUILD INTEREST AND LEARN "FUN"DAMENTALS',
     image: offer3,
     link: "#kids-training",
   },
@@ -90,12 +114,12 @@ const programs = [
   },
   {
     title: "HIGH PERFORMANCE TRAINING",
-    subtitle: "ADULT & KIDS HIGH-PERFORMANCE DRILLS",
+    subtitle: "ADULT & KIDS HIGH-PERFORMANCE COACHING AND DEVELOPMENT",
     image: offer4,
     link: "#advanced-classes",
   },
   {
-    title: "LEAGUE AND TOURNAMENT",
+    title: "TOURNAMENTS & LEAGUES",
     subtitle: "COMPETE AND SHOWCASE YOUR SKILLS",
     image: offer5,
     link: "https://activepass.app/",
@@ -108,20 +132,26 @@ const TTTraining = () => {
       <Navbar />
       <main className="pb-16 -mt-16">
         {/* Full Frame Hero Section */}
-        <section className="relative w-full min-h-[115vh] overflow-hidden mb-16">
+        <section className="relative w-full min-h-screen md:min-h-[115vh] overflow-hidden mb-16">
+          {/* Hero image — on mobile show right portion to reveal the girl + bat, on md+ center */}
           <img
             src={ttHeroImg}
             alt="Table Tennis Training"
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{
+              objectPosition: "right 20%",
+            }}
           />
-          <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center p-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-800 text-white text-center mb-6 drop-shadow-xl tracking-tight">
+          {/* Stronger overlay on mobile so text is readable over the busier image */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/60 md:bg-black/40" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-8">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-heading font-800 text-white text-center mb-4 md:mb-6 drop-shadow-xl tracking-tight leading-tight">
               Table Tennis Training
             </h1>
-            <p className="text-lg md:text-xl text-white/90 text-center max-w-2xl mb-10 drop-shadow-md font-medium">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 text-center max-w-xs sm:max-w-lg md:max-w-2xl mb-8 md:mb-10 drop-shadow-md font-medium leading-relaxed px-2">
               Join Canada's premier sports academy. Whether you're a beginner learning the basics or a pro refining your game, we have the expert coaching and world-class facilities for you.
             </p>
-            <Button size="lg" className="bg-sport-green text-white hover:bg-sport-green/90 text-lg px-8 py-6 md:py-8 rounded-full font-bold shadow-2xl transform transition-transform hover:scale-105">
+            <Button size="lg" className="bg-sport-green text-white hover:bg-sport-green/90 text-base md:text-lg px-6 md:px-8 py-5 md:py-8 rounded-full font-bold shadow-2xl transform transition-transform hover:scale-105">
               Take a free Assessment
             </Button>
           </div>
@@ -279,7 +309,7 @@ const TTTraining = () => {
                 Forging <span className="text-sport-green">Champions</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                World Sports Academy is Canada's premier destination for elite table tennis and squash training, dedicated to developing the next generation of athletes.
+                <span className="text-sport-green font-bold text-xl uppercase tracking-wide">Smash Table Tennis Club</span> is Canada's premier destination for elite table tennis training, dedicated to developing the next generation of athletes.
               </p>
             </div>
 
@@ -332,10 +362,10 @@ const TTTraining = () => {
                 </h2>
                 <div className="space-y-6">
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    We believe that every athlete has the potential to achieve greatness. At World Sports Academy, we provide the environment, expertise, and encouragement needed to unlock that potential.
+                    We believe that every athlete has the potential to achieve greatness. At <span className="text-sport-green font-bold text-xl uppercase tracking-wide">Smash Table Tennis Club</span>, we provide the environment, expertise, and encouragement needed to unlock that potential.
                   </p>
                   <p className="text-muted-foreground text-lg leading-relaxed">
-                    Whether you're picking up a racket for the first time or competing on the international stage, our commitment remains the same: to help you become the best version of yourself, both on and off the court.
+                    Whether you're picking up a bat for the first time or competing on the international stage, our commitment remains the same: to help you become the best version of yourself, both on and off the court.
                   </p>
                 </div>
               </div>
@@ -348,11 +378,17 @@ const TTTraining = () => {
 
           {/* Kids Training Section */}
           <section id="kids-training" className="pt-24 pb-12">
-            <div className="text-center mb-16 space-y-4">
-              <h2 className="text-4xl md:text-5xl font-heading font-800 tracking-tight text-foreground">Choose Your Path</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-                Led by Coach Abhinay Vaddi, our programs are tailored to elevate your game regardless of your starting point.
-              </p>
+            {/* Section header with background image */}
+            <div className="relative rounded-[2rem] overflow-hidden mb-16 min-h-[260px] flex flex-col items-center justify-center text-center px-6 py-12">
+              <img src={missionImg} alt="Table Tennis Training" className="absolute inset-0 w-full h-full object-cover object-center" />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
+              <div className="relative z-10 space-y-4 max-w-2xl mx-auto">
+                <p className="text-sport-green text-sm font-bold uppercase tracking-widest">Head Coach — Abhinay Vaddi</p>
+                <h2 className="text-4xl md:text-5xl font-heading font-800 tracking-tight text-white">Choose Your Path</h2>
+                <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
+                  Our programs are tailored to elevate your game regardless of your starting point.
+                </p>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr">
@@ -506,6 +542,14 @@ const TTTraining = () => {
                   <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
                     We are proud to train and support members of the <span className="font-bold text-foreground">Canadian National Para team</span>, providing them with world-class facilities and expert guidance to conquer the international stage.
                   </p>
+                  <div className="pt-2">
+                    <p className="font-semibold text-foreground mb-1">For Enquiries:</p>
+                    <p className="text-muted-foreground text-sm">
+                      Abhinay Vaddi <br />
+                      <a href="tel:+13653249060" className="text-sport-green hover:underline">+1 (365) 324-9060</a> <br />
+                      <a href="mailto:info@wsateam.com" className="text-sport-green hover:underline">info@wsateam.com</a>
+                    </p>
+                  </div>
                 </div>
                 <div className="relative h-full min-h-[350px] md:min-h-[450px] p-6 lg:p-10 flex items-center justify-center">
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-sport-blue/5 rounded-full blur-3xl -z-10"></div>
@@ -581,11 +625,20 @@ const TTTraining = () => {
                   </div>
 
                   {/* Locations Box */}
-                  <div className="bg-[#111111] text-white p-5 sm:p-8 rounded-2xl shadow-xl w-[140px] sm:w-[190px] flex flex-col justify-between aspect-square">
-                    <p className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-white/70">Locations</p>
+                  <div className="bg-sport-blue text-white p-5 sm:p-8 rounded-2xl shadow-xl w-[140px] sm:w-[190px] flex flex-col justify-between aspect-square">
+                    <p className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-white/90">Locations</p>
                     <div className="mt-auto">
                       <h4 className="text-4xl sm:text-6xl font-heading font-900 mb-1">2</h4>
-                      <p className="text-[10px] sm:text-xs font-bold tracking-wider uppercase text-white/70">Active Centers</p>
+                      <p className="text-[10px] sm:text-xs font-bold tracking-wider uppercase text-white/80">Active Centers</p>
+                    </div>
+                  </div>
+
+                  {/* Students Box */}
+                  <div className="bg-sport-purple text-white p-5 sm:p-8 rounded-2xl shadow-xl w-[140px] sm:w-[190px] flex flex-col justify-between aspect-square">
+                    <p className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-white/90">Community</p>
+                    <div className="mt-auto">
+                      <h4 className="text-4xl sm:text-6xl font-heading font-900 mb-1">500+</h4>
+                      <p className="text-[10px] sm:text-xs font-bold tracking-wider uppercase text-white/80">Students Trained</p>
                     </div>
                   </div>
 
