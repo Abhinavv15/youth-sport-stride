@@ -13,6 +13,11 @@ import offer4 from "@/assets/image-30.webp";
 import offer5 from "@/assets/image-19.webp";
 import missionImg from "@/assets/world sports academy image 1.webp";
 
+import ttLogo1 from "@/assets/tt_new_1.jpeg";
+import ttLogo2 from "@/assets/tt_new_2.jpeg";
+import ttLogo3 from "@/assets/tt_new_3.jpeg";
+import ttLogo4 from "@/assets/tt_new_4.jpeg";
+
 import paraImg1 from "@/assets/image-24.webp";
 import paraImg2 from "@/assets/image-29.webp";
 
@@ -58,8 +63,14 @@ import g39 from "@/assets/image-46.webp";
 import g40 from "@/assets/image-47.webp";
 import g41 from "@/assets/image-48.webp";
 
+import ng1 from "@/assets/image1.jpeg";
+import ng2 from "@/assets/image2.jpeg";
+import ng3 from "@/assets/image3.jpeg";
+import ng4 from "@/assets/image4.jpeg";
+import ng5 from "@/assets/image5.jpeg";
+
 const galleryImages = [
-  g1, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, g27, g28, g29, g30, g31, g32, g33, g34, g35, g36, g37, g38, g39, g40, g41
+  ng1, ng2, ng3, ng4, ng5, g1, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, g27, g28, g29, g30, g31, g32, g33, g34, g35, g36, g37, g38, g39, g40, g41
 ];
 
 const faqs = [
@@ -151,6 +162,20 @@ const TTTraining = () => {
             <Button size="lg" className="bg-sport-green text-white hover:bg-sport-green/90 text-base md:text-lg px-6 md:px-8 py-5 md:py-8 rounded-full font-bold shadow-2xl transform transition-transform hover:scale-105">
               Take a free Assessment
             </Button>
+
+            <div className="mt-8 sm:mt-10 mb-2 text-center">
+              <h3 className="text-white/90 font-bold tracking-widest uppercase text-sm md:text-base drop-shadow-lg drop-shadow-md">
+                Certified High Performance Training Centre
+              </h3>
+            </div>
+
+            {/* Logos on top of hero image */}
+            <div className="mt-2 sm:mt-4 flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-10">
+              <img src={ttLogo1} alt="Logo 1" className="h-12 sm:h-16 md:h-20 w-auto object-contain mix-blend-screen bg-white rounded-md p-1 opacity-90 transition-opacity hover:opacity-100 shadow-lg" />
+              <img src={ttLogo2} alt="Logo 2" className="h-12 sm:h-16 md:h-20 w-auto object-contain mix-blend-screen bg-white rounded-md p-1 opacity-90 transition-opacity hover:opacity-100 shadow-lg" />
+              <img src={ttLogo3} alt="Logo 3" className="h-12 sm:h-16 md:h-20 w-auto object-contain mix-blend-screen bg-white rounded-md p-1 opacity-90 transition-opacity hover:opacity-100 shadow-lg" />
+              <img src={ttLogo4} alt="Logo 4" className="h-12 sm:h-16 md:h-20 w-auto object-contain mix-blend-screen bg-white rounded-md p-1 opacity-90 transition-opacity hover:opacity-100 shadow-lg" />
+            </div>
           </div>
         </section>
 
@@ -373,23 +398,26 @@ const TTTraining = () => {
             </div>
           </section>
 
-          {/* Kids Training Section */}
-          <section id="kids-training" className="pt-24 pb-12">
-            {/* Section header with background image */}
-            <div className="relative rounded-[2rem] overflow-hidden mb-16 min-h-[260px] flex flex-col items-center justify-center text-center px-6 py-12">
-              <img src={missionImg} alt="Table Tennis Training" className="absolute inset-0 w-full h-full object-cover object-center" />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
-              <div className="relative z-10 space-y-4 max-w-2xl mx-auto">
-                <p className="text-sport-green text-sm font-bold uppercase tracking-widest">Head Coach — Abhinay Vaddi</p>
+        </div>
+
+        {/* Kids Training Section */}
+        <section id="kids-training" className="py-20 md:py-28 w-full relative overflow-hidden">
+          {/* Background image covering the whole section to the edges */}
+          <img src={missionImg} alt="Table Tennis Training" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
+
+          <div className="container mx-auto px-4 max-w-6xl relative z-10">
+            <div className="text-center mb-12">
+              <div className="space-y-4 max-w-2xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-heading font-800 tracking-tight text-white">Choose Your Path</h2>
                 <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
-                  Our programs are tailored to elevate your game regardless of your starting point.
+                  Led by Head Coach Abhinay Vaddi, our programs are tailored to elevate your game regardless of your starting point.
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr">
-              <div className="bg-card rounded-3xl p-8 border border-border shadow-soft hover:shadow-card transition-all duration-300 flex flex-col h-full relative overflow-hidden group hover:-translate-y-1">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr relative z-10">
+              <div className="bg-card/95 backdrop-blur-sm rounded-3xl p-8 border border-border/50 shadow-soft hover:shadow-card transition-all duration-300 flex flex-col h-full relative overflow-hidden group hover:-translate-y-1">
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-sport-blue/10">
                   <User className="w-7 h-7 text-sport-blue" />
                 </div>
@@ -408,7 +436,7 @@ const TTTraining = () => {
                   Book Now
                 </Button>
               </div>
-              <div className="bg-card rounded-3xl p-8 border border-border shadow-soft hover:shadow-card transition-all duration-300 flex flex-col h-full relative overflow-hidden group hover:-translate-y-1">
+              <div className="bg-card/95 backdrop-blur-sm rounded-3xl p-8 border border-border/50 shadow-soft hover:shadow-card transition-all duration-300 flex flex-col h-full relative overflow-hidden group hover:-translate-y-1">
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-sport-purple/10">
                   <Users className="w-7 h-7 text-sport-purple" />
                 </div>
@@ -427,7 +455,7 @@ const TTTraining = () => {
                   Book Now
                 </Button>
               </div>
-              <div className="bg-card rounded-3xl p-8 border border-border shadow-soft hover:shadow-card transition-all duration-300 flex flex-col h-full relative overflow-hidden group hover:-translate-y-1">
+              <div className="bg-card/95 backdrop-blur-sm rounded-3xl p-8 border border-border/50 shadow-soft hover:shadow-card transition-all duration-300 flex flex-col h-full relative overflow-hidden group hover:-translate-y-1">
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-sport-orange/10">
                   <UsersRound className="w-7 h-7 text-sport-orange" />
                 </div>
@@ -447,10 +475,12 @@ const TTTraining = () => {
                 </Button>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
+        <div className="container mx-auto px-4 max-w-6xl">
           {/* High Performance Training Section */}
-          <section id="advanced-classes" className="pt-8 pb-12 mb-8">
+          <section id="advanced-classes" className="pt-8 pb-12 mb-8 mt-12">
             <div className="text-center mb-10 space-y-3">
               <h2 className="text-3xl md:text-4xl font-heading font-800 tracking-tight text-foreground">High Performance Training</h2>
             </div>
