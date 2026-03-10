@@ -16,6 +16,20 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const id = location.hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else if (location.pathname !== "/") {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   const navLinks = [
     { label: "Home", href: "/" },
     {
@@ -35,7 +49,14 @@ const Navbar = () => {
       ]
     },
     { label: "Camps", href: "/#camps" },
-    { label: "Gallery", href: "/tt-training#gallery" },
+    {
+      label: "Gallery",
+      href: "#",
+      subLinks: [
+        { label: "Table Tennis", href: "/tt-training#gallery" },
+        { label: "Squash", href: "/squash-booking#gallery" },
+      ]
+    },
     { label: "Contact Us", href: "#contact" },
   ];
 
@@ -57,15 +78,29 @@ const Navbar = () => {
                   <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
                 </button>
                 <div className="absolute top-full left-0 mt-0 w-48 bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 p-2 space-y-1 z-50">
-                  {link.subLinks.map(subLink => (
-                    <Link
-                      key={subLink.label}
-                      to={subLink.href}
-                      className="block px-4 py-2 text-sm text-foreground hover:bg-sport-green/10 hover:text-sport-green rounded-lg transition-colors font-medium"
-                    >
-                      {subLink.label}
-                    </Link>
-                  ))}
+                  {link.subLinks.map(subLink => {
+                    const isHashLink = subLink.href.includes('#');
+                    const [path, hash] = subLink.href.split('#');
+                    const isCurrentPath = location.pathname === path || (path === '' && isHome && location.pathname === '/');
+
+                    return (
+                      <Link
+                        key={subLink.label}
+                        to={subLink.href}
+                        onClick={(e) => {
+                          if (isHashLink && isCurrentPath && hash) {
+                            const element = document.getElementById(hash);
+                            if (element) {
+                              element.scrollIntoView({ behavior: "smooth" });
+                            }
+                          }
+                        }}
+                        className="block px-4 py-2 text-sm text-foreground hover:bg-sport-green/10 hover:text-sport-green rounded-lg transition-colors font-medium"
+                      >
+                        {subLink.label}
+                      </Link>
+                    );
+                  })}
                 </div>
               </div>
             ) : (
@@ -99,16 +134,30 @@ const Navbar = () => {
                   <span className="block text-sm font-bold text-white/80 uppercase tracking-widest pt-2 px-2">
                     {link.label}
                   </span>
-                  {link.subLinks.map((subLink) => (
-                    <Link
-                      key={subLink.label}
-                      to={subLink.href}
-                      className="block text-sm font-medium text-white hover:text-sport-yellow transition-colors hover:bg-white/10 p-2 rounded-lg pl-4"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {subLink.label}
-                    </Link>
-                  ))}
+                  {link.subLinks.map((subLink) => {
+                    const isHashLink = subLink.href.includes('#');
+                    const [path, hash] = subLink.href.split('#');
+                    const isCurrentPath = location.pathname === path || (path === '' && isHome && location.pathname === '/');
+
+                    return (
+                      <Link
+                        key={subLink.label}
+                        to={subLink.href}
+                        className="block text-sm font-medium text-white hover:text-sport-yellow transition-colors hover:bg-white/10 p-2 rounded-lg pl-4"
+                        onClick={(e) => {
+                          setIsOpen(false);
+                          if (isHashLink && isCurrentPath && hash) {
+                            const element = document.getElementById(hash);
+                            if (element) {
+                              element.scrollIntoView({ behavior: "smooth" });
+                            }
+                          }
+                        }}
+                      >
+                        {subLink.label}
+                      </Link>
+                    );
+                  })}
                 </div>
               ) : (
                 <a

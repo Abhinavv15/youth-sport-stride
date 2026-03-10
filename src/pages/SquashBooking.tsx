@@ -6,60 +6,53 @@ import Footer from "@/components/Footer";
 import squashHeroImg from "@/assets/Squash Image.jpg";
 import coachImg from "@/assets/abhinay vaddi.jpg";
 
-import offer1 from "@/assets/squash_booking_1772282203914.png";
+import offer1 from "@/assets/squash_gallery_1.jpeg";
 import offer2 from "@/assets/squash_training_1772282166274.png";
 import offer3 from "@/assets/kids_having_fun_tt.png";
-import offer4 from "@/assets/squash_tournament_1772282244680.png";
-import offer5 from "@/assets/image-19.webp";
+import offer4 from "@/assets/squash_gallery_33.jpeg";
+import offer5 from "@/assets/squash_gallery_15.jpeg";
 import missionImg from "@/assets/world sports academy image 1.webp";
+import squashMissionImg from "@/assets/squash_gallery_15.jpeg";
 
 import paraImg1 from "@/assets/image-24.webp";
 import paraImg2 from "@/assets/image-29.webp";
 
-import g1 from "@/assets/1.webp";
-import g2 from "@/assets/abhinay vaddi.jpg";
-import g3 from "@/assets/generic_adult_playing.png";
-import g4 from "@/assets/imaege4.png";
-import g5 from "@/assets/image-1.webp";
-import g6 from "@/assets/image-2.webp";
-import g7 from "@/assets/image-4.webp";
-import g8 from "@/assets/image-5.webp";
-import g9 from "@/assets/image-6.webp";
-import g10 from "@/assets/image-7.webp";
-import g11 from "@/assets/image-9.webp";
-import g12 from "@/assets/image-10.webp";
-import g13 from "@/assets/image-11.webp";
-import g14 from "@/assets/image-12.webp";
-import g15 from "@/assets/image-13.webp";
-import g16 from "@/assets/image-16.webp";
-import g17 from "@/assets/image-17.webp";
-import g18 from "@/assets/image-18.webp";
-import g19 from "@/assets/image-19.webp";
-import g20 from "@/assets/image-20.webp";
-import g21 from "@/assets/image-21.webp";
-import g22 from "@/assets/image-23.webp";
-import g23 from "@/assets/image-24.webp";
-import g24 from "@/assets/image-25.webp";
-import g25 from "@/assets/image-27.webp";
-import g26 from "@/assets/image-28.webp";
-import g27 from "@/assets/image-29.webp";
-import g28 from "@/assets/image-30.webp";
-import g29 from "@/assets/image-31.webp";
-import g30 from "@/assets/image-32.webp";
-import g31 from "@/assets/image-33.webp";
-import g32 from "@/assets/image-34.webp";
-import g33 from "@/assets/image-35.webp";
-import g34 from "@/assets/image-36.webp";
-import g35 from "@/assets/image-41.webp";
-import g36 from "@/assets/image-43.webp";
-import g37 from "@/assets/image-44.webp";
-import g38 from "@/assets/image-45.webp";
-import g39 from "@/assets/image-46.webp";
-import g40 from "@/assets/image-47.webp";
-import g41 from "@/assets/image-48.webp";
+import sq1 from "@/assets/squash_gallery_1.jpeg";
+import sq2 from "@/assets/squash_gallery_2.jpeg";
+import sq3 from "@/assets/squash_gallery_3.jpeg";
+import sq4 from "@/assets/squash_gallery_4.jpeg";
+import sq5 from "@/assets/squash_gallery_5.jpeg";
+import sq6 from "@/assets/squash_gallery_6.jpeg";
+import sq7 from "@/assets/squash_gallery_7.jpeg";
+import sq8 from "@/assets/squash_gallery_8.jpeg";
+import sq9 from "@/assets/squash_gallery_9.jpeg";
+import sq10 from "@/assets/squash_gallery_10.jpeg";
+import sq11 from "@/assets/squash_gallery_11.jpeg";
+import sq12 from "@/assets/squash_gallery_12.jpeg";
+import sq13 from "@/assets/squash_gallery_13.jpeg";
+import sq14 from "@/assets/squash_gallery_14.jpeg";
+import sq15 from "@/assets/squash_gallery_15.jpeg";
+import sq16 from "@/assets/squash_gallery_16.jpeg";
+import sq17 from "@/assets/squash_gallery_17.jpeg";
+import sq18 from "@/assets/squash_gallery_18.jpeg";
+import sq19 from "@/assets/squash_gallery_19.jpeg";
+import sq20 from "@/assets/squash_gallery_20.jpeg";
+import sq21 from "@/assets/squash_gallery_21.jpeg";
+import sq22 from "@/assets/squash_gallery_22.jpeg";
+import sq23 from "@/assets/squash_gallery_23.jpeg";
+import sq24 from "@/assets/squash_gallery_24.jpeg";
+import sq25 from "@/assets/squash_gallery_25.jpeg";
+import sq26 from "@/assets/squash_gallery_26.jpeg";
+import sq27 from "@/assets/squash_gallery_27.jpeg";
+import sq28 from "@/assets/squash_gallery_28.jpeg";
+import sq29 from "@/assets/squash_gallery_29.jpeg";
+import sq30 from "@/assets/squash_gallery_30.jpeg";
+import sq31 from "@/assets/squash_gallery_31.jpeg";
+import sq32 from "@/assets/squash_gallery_32.jpeg";
+import sq33 from "@/assets/squash_gallery_33.jpeg";
 
 const galleryImages = [
-  g1, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, g27, g28, g29, g30, g31, g32, g33, g34, g35, g36, g37, g38, g39, g40, g41
+  sq1, sq2, sq3, sq4, sq5, sq6, sq7, sq8, sq9, sq10, sq11, sq12, sq13, sq14, sq15, sq16, sq17, sq18, sq19, sq20, sq21, sq22, sq23, sq24, sq25, sq26, sq27, sq28, sq29, sq30, sq31, sq32, sq33
 ];
 
 const faqs = [
@@ -138,7 +131,7 @@ const SquashBooking = () => {
               Squash Court Booking
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 text-center max-w-xs sm:max-w-lg md:max-w-2xl mb-8 md:mb-10 drop-shadow-md font-medium leading-relaxed px-2">
-              Join Canada's premier sports academy. Whether you're a beginner learning the basics or a pro refining your game, we have the expert coaching and world-class facilities for you.
+              Burlington Squash Club is Canada's premier destination for top tier Squash training, dedicated to developing the next generation of athletes
             </p>
             <Button size="lg" className="bg-sport-green text-white hover:bg-sport-green/90 text-base md:text-lg px-6 md:px-8 py-5 md:py-8 rounded-full font-bold shadow-2xl transform transition-transform hover:scale-105" onClick={() => window.location.href = "https://activepass.app/"}>
               Book a Court
@@ -225,6 +218,9 @@ const SquashBooking = () => {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:auto-rows-[300px]">
               {/* Box 1 - Squash Court Booking */}
               <div className="md:col-span-8 h-[260px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+                <div className="absolute top-4 right-4 z-30 pointer-events-none">
+                  <span className="bg-sport-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-white/20 shadow-md backdrop-blur-sm">Coming Soon</span>
+                </div>
                 <a href={programs[0].link} target={programs[0].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 z-10" />
@@ -238,6 +234,9 @@ const SquashBooking = () => {
 
               {/* Box 2 - Trainings */}
               <div className="md:col-span-4 h-[220px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+                <div className="absolute top-4 right-4 z-30 pointer-events-none">
+                  <span className="bg-sport-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-white/20 shadow-md backdrop-blur-sm">Coming Soon</span>
+                </div>
                 <a href={programs[1].link} target={programs[1].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-90 z-10" />
@@ -251,6 +250,9 @@ const SquashBooking = () => {
 
               {/* Box 3 - Tournaments */}
               <div className="md:col-span-6 h-[220px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+                <div className="absolute top-4 right-4 z-30 pointer-events-none">
+                  <span className="bg-sport-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-white/20 shadow-md backdrop-blur-sm">Coming Soon</span>
+                </div>
                 <a href={programs[2].link} target={programs[2].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 z-10" />
@@ -264,6 +266,9 @@ const SquashBooking = () => {
 
               {/* Box 4 - Leagues */}
               <div className="md:col-span-6 h-[220px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+                <div className="absolute top-4 right-4 z-30 pointer-events-none">
+                  <span className="bg-sport-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-white/20 shadow-md backdrop-blur-sm">Coming Soon</span>
+                </div>
                 <a href={programs[3].link} target={programs[3].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 z-10" />
@@ -347,28 +352,41 @@ const SquashBooking = () => {
               </div>
               <div className="relative order-1 md:order-2">
                 <div className="absolute inset-0 bg-gradient-to-bl from-sport-blue to-sport-green rounded-[2.5rem] transform -rotate-3 scale-[1.03] opacity-30 shadow-2xl"></div>
-                <img src={missionImg} alt="Training mission" className="relative z-10 w-full rounded-[2.5rem] object-cover shadow-2xl aspect-square md:aspect-[4/5] object-center" />
+                <img src={squashMissionImg} alt="Training mission" className="relative z-10 w-full h-auto rounded-[2.5rem] object-cover shadow-2xl" />
               </div>
             </div>
           </section>
 
-          {/* Kids Training Section */}
-          <section id="kids-training" className="pt-24 pb-12">
-            {/* Section header with background image */}
-            <div className="relative rounded-[2rem] overflow-hidden mb-8 md:mb-16 min-h-[220px] md:min-h-[300px] flex flex-col items-center justify-center text-center px-6 py-10 md:py-14">
-              <img src={squashHeroImg} alt="Squash Training" className="absolute inset-0 w-full h-full object-cover object-center" />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
-              <div className="relative z-10 space-y-4 max-w-2xl mx-auto">
-                <p className="text-sport-green text-sm font-bold uppercase tracking-widest">Head Coach — Abhinay Vaddi</p>
-                <h2 className="text-4xl md:text-5xl font-heading font-800 tracking-tight text-white">Choose Your Path</h2>
+        </div>
+
+        {/* Kids Training Section */}
+        <section id="kids-training" className="py-20 md:py-28 w-full relative overflow-hidden">
+          {/* Background image covering the whole section to the edges */}
+          <img src={squashHeroImg} alt="Squash Training" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
+
+          <div className="container mx-auto px-4 max-w-6xl relative z-10">
+            <div className="text-center mb-12">
+              <div className="space-y-4 max-w-2xl mx-auto">
+                <div className="flex flex-col items-center gap-3 mb-2">
+                  <span className="bg-sport-green text-white text-xs md:text-sm font-bold px-4 py-1.5 md:py-2 rounded-full uppercase tracking-widest border-2 border-white/20 shadow-lg">
+                    Coming Soon
+                  </span>
+                  <h2 className="text-4xl md:text-5xl font-heading font-800 tracking-tight text-white">
+                    Choose Your Path
+                  </h2>
+                </div>
                 <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
-                  Our programs are tailored to elevate your game regardless of your starting point.
+                  Led by Head Coach Abhinay Vaddi, our programs are tailored to elevate your game regardless of your starting point.
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr">
-              <div className="bg-card rounded-3xl p-8 border border-border shadow-soft hover:shadow-card transition-all duration-300 flex flex-col h-full relative overflow-hidden group hover:-translate-y-1">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr relative z-10">
+              <div className="bg-card/95 backdrop-blur-sm rounded-3xl p-8 border border-border/50 shadow-soft transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+                <div className="absolute top-4 right-4 z-20 pointer-events-none">
+                  <span className="bg-sport-green text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">Coming Soon</span>
+                </div>
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-sport-blue/10">
                   <User className="w-7 h-7 text-sport-blue" />
                 </div>
@@ -387,7 +405,10 @@ const SquashBooking = () => {
                   Book Now
                 </Button>
               </div>
-              <div className="bg-card rounded-3xl p-8 border border-border shadow-soft hover:shadow-card transition-all duration-300 flex flex-col h-full relative overflow-hidden group hover:-translate-y-1">
+              <div className="bg-card/95 backdrop-blur-sm rounded-3xl p-8 border border-border/50 shadow-soft transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+                <div className="absolute top-4 right-4 z-20 pointer-events-none">
+                  <span className="bg-sport-green text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">Coming Soon</span>
+                </div>
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-sport-purple/10">
                   <Users className="w-7 h-7 text-sport-purple" />
                 </div>
@@ -406,7 +427,10 @@ const SquashBooking = () => {
                   Book Now
                 </Button>
               </div>
-              <div className="bg-card rounded-3xl p-8 border border-border shadow-soft hover:shadow-card transition-all duration-300 flex flex-col h-full relative overflow-hidden group hover:-translate-y-1">
+              <div className="bg-card/95 backdrop-blur-sm rounded-3xl p-8 border border-border/50 shadow-soft transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+                <div className="absolute top-4 right-4 z-20 pointer-events-none">
+                  <span className="bg-sport-green text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">Coming Soon</span>
+                </div>
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 bg-sport-orange/10">
                   <UsersRound className="w-7 h-7 text-sport-orange" />
                 </div>
@@ -426,7 +450,10 @@ const SquashBooking = () => {
                 </Button>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
+
+        <div className="container mx-auto px-4 max-w-6xl">
 
           {/* Membership Section */}
           <section id="membership" className="py-16 mb-8 mt-12 px-4 max-w-6xl mx-auto">
@@ -453,34 +480,7 @@ const SquashBooking = () => {
             </div>
           </section>
 
-          {/* Para Athletes Section */}
-          <section className="py-12 md:py-16 mb-8 mt-4 px-4 max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-card to-muted/50 rounded-[2.5rem] shadow-xl border border-border overflow-hidden">
-              <div className="grid md:grid-cols-2 gap-8 md:gap-0 items-center">
-                <div className="p-8 md:p-12 lg:p-16 space-y-6 md:pr-4">
-                  <div className="inline-block px-3 py-1 bg-sport-blue/10 text-sport-blue text-xs font-bold uppercase tracking-widest rounded-full mb-2">
-                    Inclusivity & Excellence
-                  </div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-900 tracking-tight text-foreground uppercase pt-1 leading-tight">
-                    Para Athlete <br className="hidden lg:block" /> Training
-                  </h2>
-                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    We are deeply committed to empowering athletes of all abilities. Our specialized high-performance coaching programs emphasize the importance of inclusive para-training.
-                  </p>
-                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    We are proud to train and support members of the <span className="font-bold text-foreground">Canadian National Para team</span>, providing them with world-class facilities and expert guidance to conquer the international stage.
-                  </p>
-                </div>
-                <div className="relative h-full min-h-[350px] md:min-h-[450px] p-6 lg:p-10 flex items-center justify-center">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-sport-blue/5 rounded-full blur-3xl -z-10"></div>
-                  <div className="grid grid-cols-2 h-full w-full gap-4 relative z-10">
-                    <img src={paraImg1} alt="Para Athlete Training Focus" className="w-full h-[200px] md:h-[280px] object-cover rounded-2xl shadow-lg transform -rotate-3 transition-transform hover:rotate-0 hover:scale-105 duration-300" />
-                    <img src={paraImg2} alt="Canadian National Para Team Training" className="w-full h-[200px] md:h-[280px] object-cover rounded-2xl shadow-lg mt-12 md:mt-16 transform rotate-3 transition-transform hover:rotate-0 hover:scale-105 duration-300 relative z-20" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+
 
           {/* Gallery Section */}
           <section id="gallery" className="py-12 md:py-24 mb-16 max-w-6xl mx-auto px-4 scroll-mt-24">
@@ -529,7 +529,7 @@ const SquashBooking = () => {
               {/* Right Column (Image with Floating Boxes) */}
               <div className="relative pl-0 lg:pl-10 mt-10 lg:mt-0 pb-24 sm:pb-32 lg:pb-10">
                 <div className="relative rounded-[2rem] overflow-hidden aspect-square lg:aspect-[4/5]">
-                  <img src={missionImg} alt="Squash Training" className="w-full h-full object-cover" />
+                  <img src={squashMissionImg} alt="Squash Training" className="w-full h-full object-cover object-top" />
                 </div>
 
                 {/* Floating Boxes — inline on mobile, absolute-bottom on lg */}
