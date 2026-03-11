@@ -100,13 +100,13 @@ const programs = [
     link: "https://activepass.app/",
   },
   {
-    title: "OPEN PLAY",
-    subtitle: "CASUAL PLAY AND DAILY ACCESS FOR ALL LEVELS",
+    title: "MEMBERSHIP",
+    subtitle: "UNLIMITED ACCESS AND EXCLUSIVE PERKS",
     image: offer5,
     link: "https://activepass.app/",
   },
   {
-    title: "TOURNAMENTS & LEAGUES",
+    title: "TOURNAMENTS, LEAGUES & LADDERS",
     subtitle: "COMPETE AT THE HIGHEST LEVEL",
     image: offer4,
     link: "https://activepass.app/",
@@ -128,7 +128,7 @@ const SquashBooking = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/60 md:bg-black/40" />
           <div className="absolute inset-0 flex flex-col items-center justify-center p-4 md:p-8">
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-heading font-800 text-white text-center mb-4 md:mb-6 drop-shadow-xl tracking-tight leading-tight">
-              Squash Court Booking
+              Burlington Squash Club
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 text-center max-w-xs sm:max-w-lg md:max-w-2xl mb-8 md:mb-10 drop-shadow-md font-medium leading-relaxed px-2">
               Burlington Squash Club is Canada's premier destination for top tier Squash training, dedicated to developing the next generation of athletes
@@ -141,86 +141,18 @@ const SquashBooking = () => {
 
         <div className="container mx-auto px-4 max-w-6xl">
 
-          {/* Head Coach Section */}
-          <section className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 md:p-14 shadow-xl border border-slate-100 dark:border-slate-800 overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-sport-blue/5 rounded-full blur-3xl -mr-20 -mt-20"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-sport-green/5 rounded-full blur-3xl -ml-20 -mb-20"></div>
 
-            <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center relative z-10">
-              <div className="order-2 md:order-1 space-y-8">
-                <div className="space-y-3">
-                  <h3 className="text-sport-green font-bold tracking-widest uppercase text-sm flex items-center gap-2">
-                    <span className="w-8 h-[2px] bg-sport-green"></span> Head Coach
-                  </h3>
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-800 text-foreground leading-tight">
-                    Meet <br /> Abhinay Vaddi
-                  </h2>
-                  <p className="text-xl text-primary font-semibold mt-2 text-sport-green">
-                    Expert guidance for every step of your journey
-                  </p>
-                </div>
-
-                <blockquote className="border-l-4 border-sport-green pl-6 py-2 italic text-muted-foreground font-medium text-lg md:text-xl leading-relaxed bg-slate-50 dark:bg-slate-800/50 rounded-r-2xl pr-6">
-                  "My philosophy is simple: every athlete has untapped potential. Whether you're picking up a racket for the first time or aiming for national rankings, my goal is to provide the technical foundation and strategic mindset you need to excel."
-                </blockquote>
-
-                <div className="space-y-6 pt-4">
-                  <div className="flex gap-4">
-                    <div className="bg-sport-green/10 p-3 rounded-2xl shrink-0 h-fit shadow-sm border border-sport-green/20">
-                      <Award className="text-sport-green h-7 w-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-foreground text-lg">Certified Professional</h4>
-                      <p className="text-muted-foreground mt-1 leading-relaxed">Internationally recognized coaching certifications and continuous professional development.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-4">
-                    <div className="bg-sport-green/10 p-3 rounded-2xl shrink-0 h-fit shadow-sm border border-sport-green/20">
-                      <Trophy className="text-sport-green h-7 w-7" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-foreground text-lg">Proven Track Record</h4>
-                      <p className="text-muted-foreground mt-1 leading-relaxed">History of developing state and national level champions across multiple age categories.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-6">
-                  <Button
-                    size="lg"
-                    className="rounded-xl px-10 py-6 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-foreground text-background"
-                    onClick={() => window.location.href = "https://activepass.app/"}
-                  >
-                    Book a Session
-                  </Button>
-                </div>
-              </div>
-
-              <div className="order-1 md:order-2 relative group">
-                <div className="absolute inset-0 bg-sport-green rounded-[2rem] transform rotate-3 scale-[1.03] opacity-30 dark:opacity-40 transition-transform duration-500 group-hover:rotate-6 group-hover:scale-105"></div>
-                <img
-                  src={coachImg}
-                  alt="Head Coach Abhinay Vaddi"
-                  className="relative z-10 w-full rounded-[2rem] object-cover shadow-2xl aspect-[4/5] object-top transition-transform duration-500 group-hover:-translate-y-2"
-                />
-              </div>
-            </div>
-          </section>
 
           {/* What We Offer Section */}
-          <section className="py-24">
-            <div className="text-center mb-12">
+          <section className="py-12 md:py-24">
+            <div className="text-center mb-8 md:mb-12">
               <h3 className="text-sm font-bold tracking-widest uppercase text-muted-foreground mb-2">What We Offer</h3>
               <h2 className="text-4xl md:text-5xl font-heading font-800 text-foreground uppercase tracking-tight">Programs for Every Player</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:auto-rows-[300px]">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:auto-rows-[300px]">
               {/* Box 1 - Squash Court Booking */}
-              <div className="md:col-span-8 h-[260px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
-                <div className="absolute top-4 right-4 z-30 pointer-events-none">
-                  <span className="bg-sport-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-white/20 shadow-md backdrop-blur-sm">Coming Soon</span>
-                </div>
+              <div className="lg:col-span-8 h-[260px] lg:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
                 <a href={programs[0].link} target={programs[0].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 z-10" />
@@ -233,7 +165,7 @@ const SquashBooking = () => {
               </div>
 
               {/* Box 2 - Trainings */}
-              <div className="md:col-span-4 h-[220px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+              <div className="lg:col-span-4 h-[220px] lg:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
                 <div className="absolute top-4 right-4 z-30 pointer-events-none">
                   <span className="bg-sport-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-white/20 shadow-md backdrop-blur-sm">Coming Soon</span>
                 </div>
@@ -249,7 +181,7 @@ const SquashBooking = () => {
               </div>
 
               {/* Box 3 - Tournaments */}
-              <div className="md:col-span-6 h-[220px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+              <div className="lg:col-span-6 h-[220px] lg:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
                 <div className="absolute top-4 right-4 z-30 pointer-events-none">
                   <span className="bg-sport-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-white/20 shadow-md backdrop-blur-sm">Coming Soon</span>
                 </div>
@@ -265,7 +197,7 @@ const SquashBooking = () => {
               </div>
 
               {/* Box 4 - Leagues */}
-              <div className="md:col-span-6 h-[220px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+              <div className="lg:col-span-6 h-[220px] lg:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
                 <div className="absolute top-4 right-4 z-30 pointer-events-none">
                   <span className="bg-sport-green text-white text-[10px] md:text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest border border-white/20 shadow-md backdrop-blur-sm">Coming Soon</span>
                 </div>
@@ -282,57 +214,66 @@ const SquashBooking = () => {
             </div>
 
           </section>
+        </div>
 
-          {/* About Us Section */}
-          <section id="about" className="py-24 scroll-mt-24">
-            <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-800 text-foreground tracking-tight">
+        {/* About Us Section (Forging Champions) */}
+        <section id="about" className="py-16 md:py-28 w-full relative overflow-hidden scroll-mt-24 mb-12 md:mb-24">
+          <img src={sq16} alt="Squash Training Background" className="absolute inset-0 w-full h-full object-cover object-top" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
+
+          <div className="container mx-auto px-4 max-w-6xl relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-12 space-y-3 px-2">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-800 text-white tracking-tight">
                 Forging <span className="text-sport-green">Champions</span>
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                World Sports Academy is Canada's premier destination for elite table tennis and squash training, dedicated to developing the next generation of athletes.
+              <p className="text-white/80 text-base sm:text-lg leading-relaxed">
+                <span className="text-sport-green font-bold text-xl uppercase tracking-wide">World Sports Academy</span> is Canada's premier destination for elite table tennis and squash training, dedicated to developing the next generation of athletes.
               </p>
             </div>
 
-            <div className="bg-card rounded-[2.5rem] p-8 md:p-12 shadow-xl border border-border mb-24 relative overflow-hidden">
+            <div className="bg-white/10 backdrop-blur-lg rounded-[2.5rem] p-6 md:p-10 shadow-2xl border border-white/20 relative overflow-hidden mt-8 md:mt-12">
               {/* Stats grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-10 relative z-10">
                 {/* Stat 1 */}
-                <div className="text-center space-y-3">
-                  <div className="w-14 h-14 rounded-2xl bg-sport-green/10 text-sport-green flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-7 h-7" />
+                <div className="text-center space-y-2 md:space-y-3 p-4 md:p-6 bg-black/30 hover:bg-black/50 transition-colors duration-300 rounded-2xl border border-white/10 group cursor-pointer">
+                  <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl bg-sport-green text-white flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_20px_rgba(46,196,182,0.4)] group-hover:scale-110 transition-transform duration-300">
+                    <Users className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                   </div>
-                  <h3 className="text-4xl font-bold font-heading text-foreground">500+</h3>
-                  <p className="text-xs font-bold tracking-widest uppercase text-muted-foreground">Active Members</p>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-white">500+</h3>
+                  <p className="text-[10px] lg:text-xs font-bold tracking-widest uppercase text-white/80">Active Members</p>
                 </div>
                 {/* Stat 2 */}
-                <div className="text-center space-y-3">
-                  <div className="w-14 h-14 rounded-2xl bg-sport-green/10 text-sport-green flex items-center justify-center mx-auto mb-4">
-                    <Trophy className="w-7 h-7" />
+                <div className="text-center space-y-2 md:space-y-3 p-4 md:p-6 bg-black/30 hover:bg-black/50 transition-colors duration-300 rounded-2xl border border-white/10 group cursor-pointer">
+                  <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl bg-sport-blue text-white flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_20px_rgba(25,118,210,0.4)] group-hover:scale-110 transition-transform duration-300">
+                    <Trophy className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                   </div>
-                  <h3 className="text-4xl font-bold font-heading text-foreground">50+</h3>
-                  <p className="text-xs font-bold tracking-widest uppercase text-muted-foreground">Championships</p>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-white">50+</h3>
+                  <p className="text-[10px] lg:text-xs font-bold tracking-widest uppercase text-white/80">Championships</p>
                 </div>
                 {/* Stat 3 */}
-                <div className="text-center space-y-3">
-                  <div className="w-14 h-14 rounded-2xl bg-sport-green/10 text-sport-green flex items-center justify-center mx-auto mb-4">
-                    <Target className="w-7 h-7" />
+                <div className="text-center space-y-2 md:space-y-3 p-4 md:p-6 bg-black/30 hover:bg-black/50 transition-colors duration-300 rounded-2xl border border-white/10 group cursor-pointer">
+                  <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl bg-sport-purple text-white flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_20px_rgba(156,39,176,0.4)] group-hover:scale-110 transition-transform duration-300">
+                    <Target className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                   </div>
-                  <h3 className="text-4xl font-bold font-heading text-foreground">10k+</h3>
-                  <p className="text-xs font-bold tracking-widest uppercase text-muted-foreground">Sessions</p>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-white">10k+</h3>
+                  <p className="text-[10px] lg:text-xs font-bold tracking-widest uppercase text-white/80">Sessions</p>
                 </div>
                 {/* Stat 4 */}
-                <div className="text-center space-y-3">
-                  <div className="w-14 h-14 rounded-2xl bg-sport-green/10 text-sport-green flex items-center justify-center mx-auto mb-4">
-                    <Clock className="w-7 h-7" />
+                <div className="text-center space-y-2 md:space-y-3 p-4 md:p-6 bg-black/30 hover:bg-black/50 transition-colors duration-300 rounded-2xl border border-white/10 group cursor-pointer">
+                  <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl bg-sport-orange text-white flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_20px_rgba(255,152,0,0.4)] group-hover:scale-110 transition-transform duration-300">
+                    <Clock className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                   </div>
-                  <h3 className="text-4xl font-bold font-heading text-foreground">15+</h3>
-                  <p className="text-xs font-bold tracking-widest uppercase text-muted-foreground">Years Legacy</p>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-white">15+</h3>
+                  <p className="text-[10px] lg:text-xs font-bold tracking-widest uppercase text-white/80">Years Legacy</p>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <section className="mb-12 md:mb-24">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div className="space-y-8 order-2 md:order-1">
                 <div className="flex items-center gap-4">
                   <span className="w-12 h-[2px] bg-sport-green"></span>
@@ -360,29 +301,29 @@ const SquashBooking = () => {
         </div>
 
         {/* Kids Training Section */}
-        <section id="kids-training" className="py-20 md:py-28 w-full relative overflow-hidden">
+        <section id="kids-training" className="py-16 md:py-28 w-full relative overflow-hidden">
           {/* Background image covering the whole section to the edges */}
           <img src={squashHeroImg} alt="Squash Training" className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
 
           <div className="container mx-auto px-4 max-w-6xl relative z-10">
-            <div className="text-center mb-12">
-              <div className="space-y-4 max-w-2xl mx-auto">
-                <div className="flex flex-col items-center gap-3 mb-2">
-                  <span className="bg-sport-green text-white text-xs md:text-sm font-bold px-4 py-1.5 md:py-2 rounded-full uppercase tracking-widest border-2 border-white/20 shadow-lg">
+            <div className="text-center mb-8 md:mb-12">
+              <div className="space-y-3 md:space-y-4 max-w-2xl mx-auto px-2">
+                <div className="flex flex-col items-center gap-2 md:gap-3 mb-2">
+                  <span className="bg-sport-green text-white text-[10px] sm:text-xs font-bold px-3 py-1 md:px-4 md:py-1.5 rounded-full uppercase tracking-widest border border-white/20 shadow-lg">
                     Coming Soon
                   </span>
-                  <h2 className="text-4xl md:text-5xl font-heading font-800 tracking-tight text-white">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-800 tracking-tight text-white leading-tight">
                     Choose Your Path
                   </h2>
                 </div>
-                <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
+                <p className="text-white/80 text-base sm:text-lg max-w-lg md:max-w-2xl mx-auto leading-relaxed">
                   Led by Head Coach Abhinay Vaddi, our programs are tailored to elevate your game regardless of your starting point.
                 </p>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 auto-rows-fr relative z-10 mb-8">
               <div className="bg-card/95 backdrop-blur-sm rounded-3xl p-8 border border-border/50 shadow-soft transition-all duration-300 flex flex-col h-full relative overflow-hidden">
                 <div className="absolute top-4 right-4 z-20 pointer-events-none">
                   <span className="bg-sport-green text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">Coming Soon</span>
@@ -453,35 +394,41 @@ const SquashBooking = () => {
           </div>
         </section>
 
-        <div className="container mx-auto px-4 max-w-6xl">
+        {/* Membership Section */}
+        <section id="membership" className="py-12 md:py-20 w-full relative overflow-hidden mb-8 mt-8 md:mt-12 bg-background">
+          <div className="container mx-auto px-4 max-w-6xl relative z-10">
+            <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl group border border-border/50">
+              {/* Card Background Image */}
+              <img src={sq27} alt="Elite Benefits Background" className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" />
+              {/* Dark Overlay for Readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/50 md:from-black/90 md:via-black/75 md:to-black/40" />
 
-          {/* Membership Section */}
-          <section id="membership" className="py-16 mb-8 mt-12 px-4 max-w-6xl mx-auto">
-            <div className="bg-sport-green/5 rounded-[2rem] border-2 border-sport-green/20 p-8 md:p-14 flex flex-col items-center justify-between gap-8 md:flex-row shadow-sm hover:shadow-md hover:border-sport-green/40 transition-all duration-300">
-              <div className="space-y-4 text-center md:text-left flex-1">
-                <div className="inline-block px-3 py-1 bg-sport-green/10 text-sport-green text-xs font-bold uppercase tracking-widest rounded-full mb-2">
-                  Elite Benefits
+              <div className="relative z-10 p-8 md:p-14 lg:p-16 flex flex-col items-center justify-between gap-8 md:flex-row">
+                <div className="space-y-4 text-center md:text-left flex-1">
+                  <div className="inline-block px-3 py-1 bg-sport-green text-white text-xs font-bold uppercase tracking-widest rounded-full mb-2 shadow-lg">
+                    Elite Benefits
+                  </div>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-900 tracking-tight text-white uppercase drop-shadow-md">
+                    Unlock the full <br className="hidden md:block" /> squash experience
+                  </h2>
+                  <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-xl font-medium drop-shadow-sm">
+                    Get unlimited access to our state-of-the-art facilities, participate in exclusive leagues, enjoy priority tournament registration, and track your progress. Join our passionate community today.
+                  </p>
                 </div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-900 tracking-tight text-foreground uppercase pt-1">
-                  Unlock the full <br className="hidden md:block" /> squash experience
-                </h2>
-                <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl">
-                  Get unlimited access to our state-of-the-art facilities, participate in exclusive leagues, enjoy priority tournament registration, and track your progress. Join our passionate community today.
-                </p>
-              </div>
-              <div className="flex-shrink-0 w-full md:w-auto mt-6 md:mt-0">
-                <Button
-                  className="w-full md:w-auto text-sm md:text-base font-semibold rounded-full px-8 py-7 shadow-lg transition-all duration-300 transform hover:scale-105 bg-sport-green text-white hover:bg-sport-green/90 uppercase tracking-widest"
-                  onClick={() => window.location.href = "https://activepass.app/"}
-                >
-                  Become a Member <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
+                <div className="flex-shrink-0 w-full md:w-auto">
+                  <Button
+                    className="w-full md:w-auto text-sm md:text-base font-bold rounded-full px-10 py-8 shadow-2xl transition-all duration-300 transform hover:scale-105 bg-sport-green text-white hover:bg-sport-green/90 uppercase tracking-widest"
+                    onClick={() => window.location.href = "https://activepass.app/"}
+                  >
+                    Become a Member <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-
-
+        <div className="container mx-auto px-4 max-w-6xl">
           {/* Gallery Section */}
           <section id="gallery" className="py-12 md:py-24 mb-16 max-w-6xl mx-auto px-4 scroll-mt-24">
             <div className="text-center mb-12">
@@ -499,7 +446,7 @@ const SquashBooking = () => {
           </section>
 
           {/* FAQ / Proud Section */}
-          <section className="py-24 mb-16">
+          <section className="py-12 md:py-24 mb-16">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
 
               {/* Left Column (Text & Accordion) */}
@@ -567,7 +514,6 @@ const SquashBooking = () => {
 
             </div>
           </section>
-
         </div>
       </main>
       <Footer />

@@ -69,7 +69,7 @@ const Navbar = () => {
         </a>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => (
             link.subLinks ? (
               <div key={link.label} className="relative group py-2">
@@ -116,7 +116,7 @@ const Navbar = () => {
         </div>
 
         <button
-          className="md:hidden hover:text-sport-yellow transition-colors text-white"
+          className="lg:hidden hover:text-sport-yellow transition-colors text-white"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -126,7 +126,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-sport-green/95 backdrop-blur-md border-b border-border px-4 pb-4 space-y-3">
+        <div className="lg:hidden bg-sport-green/95 backdrop-blur-md border-b border-border px-4 pb-4 space-y-3">
           {navLinks.map((link) => (
             <div key={link.label}>
               {link.subLinks ? (

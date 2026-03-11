@@ -9,7 +9,7 @@ import coachImg from "@/assets/abhinay vaddi.jpg";
 import offer1 from "@/assets/generic_adult_playing.png";
 import offer2 from "@/assets/TT IMAGE.jpg";
 import offer3 from "@/assets/kids_having_fun_tt.png";
-import offer4 from "@/assets/image-30.webp";
+import offer4 from "@/assets/image-48.webp";
 import offer5 from "@/assets/image-19.webp";
 import missionImg from "@/assets/world sports academy image 1.webp";
 
@@ -20,6 +20,11 @@ import ttLogo4 from "@/assets/tt_new_4.jpeg";
 
 import paraImg1 from "@/assets/image-24.webp";
 import paraImg2 from "@/assets/image-29.webp";
+import paraImg3 from "@/assets/image-25.webp";
+import paraImg4 from "@/assets/image-21.webp";
+import paraImg5 from "@/assets/image5.jpeg";
+import paraImg6 from "@/assets/image3.jpeg";
+import paraImg7 from "@/assets/image1.jpeg";
 
 import g1 from "@/assets/1.webp";
 import g2 from "@/assets/abhinay vaddi.jpg";
@@ -69,8 +74,40 @@ import ng3 from "@/assets/image3.jpeg";
 import ng4 from "@/assets/image4.jpeg";
 import ng5 from "@/assets/image5.jpeg";
 
+import t1 from "@/assets/new_tt_gallery_1.jpg";
+import t2 from "@/assets/new_tt_gallery_2.jpg";
+import t3 from "@/assets/new_tt_gallery_3.jpg";
+import t4 from "@/assets/new_tt_gallery_4.jpg";
+import t5 from "@/assets/new_tt_gallery_5.jpg";
+import t6 from "@/assets/new_tt_gallery_6.jpg";
+import t7 from "@/assets/new_tt_gallery_7.jpg";
+import t8 from "@/assets/new_tt_gallery_8.jpg";
+import t9 from "@/assets/new_tt_gallery_9.jpg";
+import t10 from "@/assets/new_tt_gallery_10.jpg";
+import t11 from "@/assets/new_tt_gallery_11.jpg";
+import t12 from "@/assets/new_tt_gallery_12.jpg";
+import t13 from "@/assets/new_tt_gallery_13.jpg";
+import t14 from "@/assets/new_tt_gallery_14.jpg";
+import t15 from "@/assets/new_tt_gallery_15.jpg";
+import t16 from "@/assets/new_tt_gallery_16.jpg";
+import t17 from "@/assets/new_tt_gallery_17.jpg";
+
 const galleryImages = [
-  ng1, ng2, ng3, ng4, ng5, g1, g5, g6, g7, g8, g9, g10, g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g21, g22, g23, g24, g25, g26, g27, g28, g29, g30, g31, g32, g33, g34, g35, g36, g37, g38, g39, g40, g41
+  // new_tt_gallery set (no duplicates)
+  t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17,
+  // jpeg set
+  ng1, ng2, ng3, ng4, ng5,
+  // image-*.webp set — duplicates removed:
+  // removed g1 (1.webp = image-1.webp = image-11.webp)
+  // removed g6 (image-6.webp = image-16.webp)
+  // removed g9 (image-9.webp = image-20.webp)
+  // removed g10 (image-10.webp = image-27.webp)
+  // removed g13 (image-11.webp dupe)
+  // removed g14 (image-12.webp = image-2.webp)
+  // removed g17 (image-17.webp = image-7.webp)
+  // removed g19 (image-19.webp same as world sports academy image 1.webp used in missionImg)
+  // removed g25 (image-27.webp dupe of image-10.webp)
+  g5, g7, g8, g11, g12, g15, g16, g18, g20, g21, g22, g23, g24, g26, g27, g28, g29, g30, g31, g32, g33, g34, g35, g36, g37, g38, g39, g40, g41
 ];
 
 const faqs = [
@@ -154,7 +191,7 @@ const TTTraining = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/70" />
           <div className="absolute inset-0 flex flex-col items-center justify-end pb-16 sm:justify-center sm:pb-0 p-4 md:p-8">
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-heading font-800 text-white text-center mb-4 md:mb-6 drop-shadow-xl tracking-tight leading-tight">
-              Table Tennis Training
+              Smash Table Tennis Club
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-white/90 text-center max-w-xs sm:max-w-lg md:max-w-2xl mb-8 md:mb-10 drop-shadow-md font-medium leading-relaxed px-2">
               Join Canada's premier sports academy. Whether you're a beginner learning the basics or a pro refining your game, we have the expert coaching and world-class facilities for you.
@@ -249,15 +286,15 @@ const TTTraining = () => {
           </section>
 
           {/* What We Offer Section */}
-          <section className="py-24">
-            <div className="text-center mb-12">
+          <section className="py-12 md:py-24">
+            <div className="text-center mb-8 md:mb-12">
               <h3 className="text-sm font-bold tracking-widest uppercase text-muted-foreground mb-2">What We Offer</h3>
               <h2 className="text-4xl md:text-5xl font-heading font-800 text-foreground uppercase tracking-tight">Programs for Every Player</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:auto-rows-[300px]">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:auto-rows-[300px]">
               {/* Box 1 - Kids Training (Large) */}
-              <div className="md:col-span-8 h-[260px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+              <div className="lg:col-span-8 h-[260px] lg:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
                 <a href={programs[0].link} target={programs[0].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 z-10" />
@@ -270,7 +307,7 @@ const TTTraining = () => {
               </div>
 
               {/* Box 2 - Open Play (Small Vertical) */}
-              <div className="md:col-span-4 h-[220px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+              <div className="lg:col-span-4 h-[220px] lg:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
                 <a href={programs[2].link} target={programs[2].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-90 z-10" />
@@ -283,7 +320,7 @@ const TTTraining = () => {
               </div>
 
               {/* Box 3 - Membership (Small) */}
-              <div className="md:col-span-4 h-[220px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+              <div className="lg:col-span-4 h-[220px] lg:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
                 <a href={programs[1].link} target={programs[1].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 z-10" />
@@ -296,7 +333,7 @@ const TTTraining = () => {
               </div>
 
               {/* Box 4 - Advanced Classes (Small) */}
-              <div className="md:col-span-4 h-[220px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+              <div className="lg:col-span-4 h-[220px] lg:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
                 <a href={programs[3].link} target={programs[3].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-80 z-10" />
@@ -309,7 +346,7 @@ const TTTraining = () => {
               </div>
 
               {/* Box 5 - League and Tournament (Small) */}
-              <div className="md:col-span-4 h-[220px] md:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
+              <div className="lg:col-span-4 h-[220px] lg:h-auto relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg">
                 <a href={programs[4].link} target={programs[4].link.startsWith('http') ? "_blank" : "_self"} rel="noreferrer" className="block w-full h-full">
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-500 z-10" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-90 z-10" />
@@ -323,57 +360,66 @@ const TTTraining = () => {
             </div>
 
           </section>
+        </div>
 
-          {/* About Us Section */}
-          <section id="about" className="py-24 scroll-mt-24">
-            <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-800 text-foreground tracking-tight">
+        {/* About Us Section (Forging Champions) */}
+        <section id="about" className="py-16 md:py-28 w-full relative overflow-hidden scroll-mt-24 mb-12 md:mb-24">
+          <img src={t9} alt="Table Tennis Training" className="absolute inset-0 w-full h-full object-cover object-top" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
+
+          <div className="container mx-auto px-4 max-w-6xl relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-12 space-y-3 px-2">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-800 text-white tracking-tight">
                 Forging <span className="text-sport-green">Champions</span>
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
+              <p className="text-white/80 text-lg leading-relaxed">
                 <span className="text-sport-green font-bold text-xl uppercase tracking-wide">Smash Table Tennis Club</span> is Canada's premier destination for elite table tennis training, dedicated to developing the next generation of athletes.
               </p>
             </div>
 
-            <div className="bg-card rounded-[2.5rem] p-8 md:p-12 shadow-xl border border-border mb-24 relative overflow-hidden">
+            <div className="bg-white/10 backdrop-blur-lg rounded-[2.5rem] p-6 md:p-10 shadow-2xl border border-white/20 relative overflow-hidden mt-8 md:mt-12">
               {/* Stats grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-10 relative z-10">
                 {/* Stat 1 */}
-                <div className="text-center space-y-3">
-                  <div className="w-14 h-14 rounded-2xl bg-sport-green/10 text-sport-green flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-7 h-7" />
+                <div className="text-center space-y-2 md:space-y-3 p-4 md:p-6 bg-black/30 hover:bg-black/50 transition-colors duration-300 rounded-2xl border border-white/10 group cursor-pointer">
+                  <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl bg-sport-green text-white flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_20px_rgba(46,196,182,0.4)] group-hover:scale-110 transition-transform duration-300">
+                    <Users className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                   </div>
-                  <h3 className="text-4xl font-bold font-heading text-foreground">500+</h3>
-                  <p className="text-xs font-bold tracking-widest uppercase text-muted-foreground">Active Members</p>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-white">500+</h3>
+                  <p className="text-[10px] lg:text-xs font-bold tracking-widest uppercase text-white/80">Active Members</p>
                 </div>
                 {/* Stat 2 */}
-                <div className="text-center space-y-3">
-                  <div className="w-14 h-14 rounded-2xl bg-sport-green/10 text-sport-green flex items-center justify-center mx-auto mb-4">
-                    <Trophy className="w-7 h-7" />
+                <div className="text-center space-y-2 md:space-y-3 p-4 md:p-6 bg-black/30 hover:bg-black/50 transition-colors duration-300 rounded-2xl border border-white/10 group cursor-pointer">
+                  <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl bg-sport-blue text-white flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_20px_rgba(25,118,210,0.4)] group-hover:scale-110 transition-transform duration-300">
+                    <Trophy className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                   </div>
-                  <h3 className="text-4xl font-bold font-heading text-foreground">50+</h3>
-                  <p className="text-xs font-bold tracking-widest uppercase text-muted-foreground">Championships</p>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-white">50+</h3>
+                  <p className="text-[10px] lg:text-xs font-bold tracking-widest uppercase text-white/80">Championships</p>
                 </div>
                 {/* Stat 3 */}
-                <div className="text-center space-y-3">
-                  <div className="w-14 h-14 rounded-2xl bg-sport-green/10 text-sport-green flex items-center justify-center mx-auto mb-4">
-                    <Target className="w-7 h-7" />
+                <div className="text-center space-y-2 md:space-y-3 p-4 md:p-6 bg-black/30 hover:bg-black/50 transition-colors duration-300 rounded-2xl border border-white/10 group cursor-pointer">
+                  <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl bg-sport-purple text-white flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_20px_rgba(156,39,176,0.4)] group-hover:scale-110 transition-transform duration-300">
+                    <Target className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                   </div>
-                  <h3 className="text-4xl font-bold font-heading text-foreground">10k+</h3>
-                  <p className="text-xs font-bold tracking-widest uppercase text-muted-foreground">Sessions</p>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-white">10k+</h3>
+                  <p className="text-[10px] lg:text-xs font-bold tracking-widest uppercase text-white/80">Sessions</p>
                 </div>
                 {/* Stat 4 */}
-                <div className="text-center space-y-3">
-                  <div className="w-14 h-14 rounded-2xl bg-sport-green/10 text-sport-green flex items-center justify-center mx-auto mb-4">
-                    <Clock className="w-7 h-7" />
+                <div className="text-center space-y-2 md:space-y-3 p-4 md:p-6 bg-black/30 hover:bg-black/50 transition-colors duration-300 rounded-2xl border border-white/10 group cursor-pointer">
+                  <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-2xl bg-sport-orange text-white flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_20px_rgba(255,152,0,0.4)] group-hover:scale-110 transition-transform duration-300">
+                    <Clock className="w-6 h-6 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                   </div>
-                  <h3 className="text-4xl font-bold font-heading text-foreground">15+</h3>
-                  <p className="text-xs font-bold tracking-widest uppercase text-muted-foreground">Years Legacy</p>
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold font-heading text-white">15+</h3>
+                  <p className="text-[10px] lg:text-xs font-bold tracking-widest uppercase text-white/80">Years Legacy</p>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <section className="mb-12 md:mb-24">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div className="space-y-8 order-2 md:order-1">
                 <div className="flex items-center gap-4">
                   <span className="w-12 h-[2px] bg-sport-green"></span>
@@ -401,16 +447,16 @@ const TTTraining = () => {
         </div>
 
         {/* Kids Training Section */}
-        <section id="kids-training" className="py-20 md:py-28 w-full relative overflow-hidden">
+        <section id="kids-training" className="py-16 md:py-28 w-full relative overflow-hidden">
           {/* Background image covering the whole section to the edges */}
           <img src={missionImg} alt="Table Tennis Training" className="absolute inset-0 w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
 
           <div className="container mx-auto px-4 max-w-6xl relative z-10">
-            <div className="text-center mb-12">
-              <div className="space-y-4 max-w-2xl mx-auto">
-                <h2 className="text-4xl md:text-5xl font-heading font-800 tracking-tight text-white">Choose Your Path</h2>
-                <p className="text-white/80 text-lg max-w-2xl mx-auto leading-relaxed">
+            <div className="text-center mb-8 md:mb-12">
+              <div className="space-y-3 md:space-y-4 max-w-2xl mx-auto px-2">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-800 tracking-tight text-white leading-tight">Choose Your Path</h2>
+                <p className="text-white/80 text-base sm:text-lg max-w-lg md:max-w-2xl mx-auto leading-relaxed">
                   Led by Head Coach Abhinay Vaddi, our programs are tailored to elevate your game regardless of your starting point.
                 </p>
               </div>
@@ -486,14 +532,14 @@ const TTTraining = () => {
             </div>
             <div className="bg-card rounded-[2rem] shadow-xl border border-border overflow-hidden max-w-5xl mx-auto">
               <div className="grid md:grid-cols-2">
-                <div className="relative h-64 md:h-auto">
+                <div className="relative h-48 sm:h-64 md:h-auto">
                   <img src={offer4} alt="Advanced Classes" className="absolute inset-0 w-full h-full object-cover" />
                 </div>
-                <div className="p-6 md:p-10 lg:p-12 space-y-6">
-                  <div className="w-12 h-12 rounded-xl bg-sport-green/10 text-sport-green flex items-center justify-center mb-4">
-                    <Trophy className="w-6 h-6" />
+                <div className="p-6 sm:p-8 md:p-10 lg:p-12 space-y-4 sm:space-y-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-sport-green/10 text-sport-green flex items-center justify-center mb-2 sm:mb-4">
+                    <Trophy className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground">Reach Peak Performance</h2>
+                  <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-heading font-bold text-foreground">Reach Peak Performance</h2>
                   <p className="text-muted-foreground text-base leading-relaxed">
                     For athletes aiming for the podium. Our high-performance training includes advanced tactics, physical conditioning, and mental toughness coaching.
                   </p>
@@ -527,17 +573,23 @@ const TTTraining = () => {
               </div>
             </div>
           </section>
-          {/* Membership Section */}
-          <section id="membership" className="py-16 mb-8 mt-12 px-4 max-w-6xl mx-auto">
-            <div className="bg-sport-green/5 rounded-[2rem] border-2 border-sport-green/20 p-8 md:p-14 flex flex-col items-center justify-between gap-8 md:flex-row shadow-sm hover:shadow-md hover:border-sport-green/40 transition-all duration-300">
+        </div>
+
+        {/* Membership Section */}
+        <section id="membership" className="py-16 md:py-28 w-full relative overflow-hidden mb-8 mt-8 md:mt-12">
+          <img src={offer2} alt="Elite Benefits" className="absolute inset-0 w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80" />
+
+          <div className="container mx-auto px-4 max-w-6xl relative z-10">
+            <div className="bg-white/10 backdrop-blur-md rounded-[2.5rem] border border-white/20 p-8 md:p-14 flex flex-col items-center justify-between gap-8 md:flex-row shadow-2xl">
               <div className="space-y-4 text-center md:text-left flex-1">
-                <div className="inline-block px-3 py-1 bg-sport-green/10 text-sport-green text-xs font-bold uppercase tracking-widest rounded-full mb-2">
+                <div className="inline-block px-3 py-1 bg-sport-green/20 text-sport-green text-xs font-bold uppercase tracking-widest rounded-full mb-2 border border-sport-green/30">
                   Elite Benefits
                 </div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-900 tracking-tight text-foreground uppercase pt-1">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-900 tracking-tight text-white uppercase pt-1">
                   Unlock the full <br className="hidden md:block" /> table tennis experience
                 </h2>
-                <p className="text-muted-foreground text-base md:text-lg leading-relaxed max-w-xl">
+                <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-xl">
                   Get unlimited access to our state-of-the-art facilities, participate in exclusive leagues, enjoy priority tournament registration, and track your progress. Join our passionate community today.
                 </p>
               </div>
@@ -550,41 +602,66 @@ const TTTraining = () => {
                 </Button>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
+
+        <div className="container mx-auto px-4 max-w-6xl">
 
           {/* Para Athletes Section */}
-          <section className="py-12 md:py-16 mb-8 mt-4 px-4 max-w-6xl mx-auto">
-            <div className="bg-gradient-to-br from-card to-muted/50 rounded-[2.5rem] shadow-xl border border-border overflow-hidden">
-              <div className="grid md:grid-cols-2 gap-8 md:gap-0 items-center">
-                <div className="p-8 md:p-12 lg:p-16 space-y-6 md:pr-4">
-                  <div className="inline-block px-3 py-1 bg-sport-blue/10 text-sport-blue text-xs font-bold uppercase tracking-widest rounded-full mb-2">
-                    Inclusivity & Excellence
+          <section className="relative py-16 md:py-20 mb-8 mt-4 rounded-[2.5rem] overflow-hidden shadow-2xl min-h-[520px]">
+            {/* Background image — image5.jpeg */}
+            <img
+              src={paraImg5}
+              alt="Para Athletes with Abhinay Vaddi"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            {/* Overlay — light enough so bg is visible */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/30" />
+
+            {/* Content grid */}
+            <div className="relative z-10 container mx-auto px-6 md:px-10 lg:px-14">
+              <div className="grid md:grid-cols-2 gap-8 items-center min-h-[420px]">
+
+                {/* Left — Text */}
+                <div className="space-y-5 py-4">
+                  <div className="inline-block px-3 py-1 bg-sport-blue/30 backdrop-blur-sm text-blue-200 text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full border border-blue-300/30">
+                    Inclusivity &amp; Excellence
                   </div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-900 tracking-tight text-foreground uppercase pt-1 leading-tight">
-                    Para Athlete <br className="hidden lg:block" /> Training
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-900 tracking-tight text-white uppercase leading-tight">
+                    Para Athlete <br /> Training
                   </h2>
-                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
+                  <p className="text-white/80 text-base leading-relaxed max-w-sm">
                     We are deeply committed to empowering athletes of all abilities. Our specialized high-performance coaching programs emphasize the importance of inclusive para-training.
                   </p>
-                  <p className="text-muted-foreground text-base md:text-lg leading-relaxed">
-                    We are proud to train and support members of the <span className="font-bold text-foreground">Canadian National Para team</span>, providing them with world-class facilities and expert guidance to conquer the international stage.
+                  <p className="text-white/80 text-base leading-relaxed max-w-sm">
+                    We are proud to train and support members of the <span className="font-bold text-white">Canadian National Para team</span>, providing them with world-class facilities and expert guidance.
                   </p>
-                  <div className="pt-2">
-                    <p className="font-semibold text-foreground mb-1">For Enquiries:</p>
-                    <p className="text-muted-foreground text-sm">
-                      Abhinay Vaddi <br />
-                      <a href="tel:+13653249060" className="text-sport-green hover:underline">+1 (365) 324-9060</a> <br />
+                  <div>
+                    <p className="font-semibold text-white text-sm mb-1">For Enquiries:</p>
+                    <p className="text-white/70 text-sm leading-relaxed">
+                      Abhinay Vaddi<br />
+                      <a href="tel:+13653249060" className="text-sport-green hover:underline">+1 (365) 324-9060</a><br />
                       <a href="mailto:info@wsateam.com" className="text-sport-green hover:underline">info@wsateam.com</a>
                     </p>
                   </div>
                 </div>
-                <div className="relative h-full min-h-[350px] md:min-h-[450px] p-6 lg:p-10 flex items-center justify-center">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-sport-blue/5 rounded-full blur-3xl -z-10"></div>
-                  <div className="grid grid-cols-2 h-full w-full gap-4 relative z-10">
-                    <img src={paraImg1} alt="Para Athlete Training Focus" className="w-full h-[200px] md:h-[280px] object-cover rounded-2xl shadow-lg transform -rotate-3 transition-transform hover:rotate-0 hover:scale-105 duration-300" />
-                    <img src={paraImg2} alt="Canadian National Para Team Training" className="w-full h-[200px] md:h-[280px] object-cover rounded-2xl shadow-lg mt-12 md:mt-16 transform rotate-3 transition-transform hover:rotate-0 hover:scale-105 duration-300 relative z-20" />
+
+                {/* Right — Clean 2x2 Grid Gallery */}
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-5 w-full max-w-[600px] ml-auto">
+                  <div className="overflow-hidden rounded-2xl shadow-2xl aspect-square transition-all duration-300 hover:scale-105 group">
+                    <img src={paraImg2} alt="Para Athlete Training" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  </div>
+                  <div className="overflow-hidden rounded-2xl shadow-2xl aspect-square transition-all duration-300 hover:scale-105 group">
+                    <img src={paraImg7} alt="Para Athlete Action" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  </div>
+                  <div className="overflow-hidden rounded-2xl shadow-2xl aspect-square transition-all duration-300 hover:scale-105 group">
+                    <img src={paraImg3} alt="Para Athlete" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  </div>
+                  <div className="overflow-hidden rounded-2xl shadow-2xl aspect-square transition-all duration-300 hover:scale-105 group">
+                    <img src={paraImg6} alt="Para Athlete Coaching" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                   </div>
                 </div>
+
               </div>
             </div>
           </section>
@@ -606,7 +683,7 @@ const TTTraining = () => {
           </section>
 
           {/* FAQ / Proud Section */}
-          <section className="py-24 mb-16">
+          <section className="py-12 md:py-24 mb-16">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
 
               {/* Left Column (Text & Accordion) */}
